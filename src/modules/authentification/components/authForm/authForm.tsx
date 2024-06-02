@@ -6,9 +6,10 @@ import hidePassword from "../../../../assets/icons/pages/authentification/hidePa
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-import styles from "./authForm.module.scss"
 import { loginUser } from "../../api/authorisation"
 import { emailPattern } from "../../../../helpers/authConstants"
+
+import styles from "./authForm.module.scss"
 
 export interface IUserAuthForm {
   email: string
@@ -102,7 +103,7 @@ const AuthForm = () => {
 
         <span className={styles.toRegisterLink}>
           Нет аккаунта?
-          <Link className={styles.toRegisterLink} to="/register">
+          <Link className={styles.toRegisterLink} to="/regist">
             Зарегистрироваться
           </Link>
         </span>

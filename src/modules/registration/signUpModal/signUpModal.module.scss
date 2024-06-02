@@ -1,0 +1,43 @@
+.overlay {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  background-color: #2e3042;
+  border-radius: 12px;
+  width: 28%;
+  padding: 30px 20px;
+  position: absolute;
+  top: 5%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 430px) {
+    & {
+      width: 70vw;
+      padding: 20px 15px;
+      gap: 20px;
+    }
+  }
+}
+
+.cross {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  top: 22.5px;
+  right: 21.5px;
+
+  @media (max-width: 430px) {
+    & {
+      position: absolute;
+      width: 4.3vw;
+    }
+  }
+}
+
