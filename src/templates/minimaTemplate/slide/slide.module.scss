@@ -1,0 +1,123 @@
+.container {
+  width: 100vw;
+  height: 56.25vw;
+  margin-bottom: 10px;
+}
+
+.slideWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slideWrap__title {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  height: 15%;
+  width: 50%;
+  font-size: 2.5vw;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.slideWrap__text {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 45%;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+.slideWrap__imageContainer {
+  position: absolute;
+  right: 9.3%;
+  top: 31%;
+  width: 36%;
+  height: 53%;
+  background-color: #e0e0e0;
+  border-radius: 60px;
+}
+
+.slideWrapONE {
+  composes: slideWrap;
+  background-image: url("../../../assets/templates/minimaTemplate/slide1.png");
+}
+.slideWrapTWO {
+  composes: slideWrap;
+  background-image: url("../../../assets/templates/minimaTemplate/slide2.png");
+}
+.slideWrapTHREE {
+  composes: slideWrap;
+  background-image: url("../../../assets/templates/minimaTemplate/slide3.png");
+}
+
+.slideWrapONE__title {
+  composes: slideWrap__title;
+}
+.slideWrapTWO__title {
+  composes: slideWrap__title;
+  top: 47%;
+  left: 8%;
+  width: 80%;
+  height: 10%;
+}
+
+.slideWrapTHREE__title {
+  composes: slideWrap__title;
+}
+
+.slideWrapONE__text {
+  composes: slideWrap__text;
+}
+.slideWrapTWO__text {
+  composes: slideWrap__text;
+  top: 57%;
+  left: 8%;
+  width: 82%;
+  height: 37.5%;
+}
+
+.slideWrapTHREE__text {
+  composes: slideWrap__text;
+}
+
+.slideWrapONE__imageContainer {
+  composes: slideWrap__imageContainer;
+}
+.slideWrapTWO__imageContainer_0 {
+  composes: slideWrap__imageContainer;
+  top: 12%;
+  left: 10.5%;
+  width: 28.6%;
+  height: 30.3%;
+  border-radius: 40px;
+}
+.slideWrapTWO__imageContainer_1 {
+  composes: slideWrap__imageContainer;
+  top: 12%;
+  right: 10.5%;
+  width: 28.6%;
+  height: 30.3%;
+  border-radius: 40px;
+}
+
+.slideWrapTHREE__imageContainer {
+  composes: slideWrap__imageContainer;
+  width: 39%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  border-radius: 0px;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
