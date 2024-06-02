@@ -1,9 +1,4 @@
-import {
-  ISlide,
-  templateContent,
-} from "../../../assets/mocks/minimaTemplateMocks"
-import { templateNumbers } from "../../../constants/templateNumbers"
-// import testImage from "../../../assets/templates/minimaTemplate/testSLide1.png"
+import { ISlide } from "../../../assets/mocks/minimaTemplateMocks"
 
 import styles from "./slide.module.scss"
 
@@ -49,7 +44,9 @@ const Slide = ({ numberSlide, content }: IMinimalSlide) => {
             {content.slideImage.map((item, index) => {
               return (
                 <div
-                  className={styles[`slideWrap${numberSlide}__imageContainer_${index}`]}
+                  className={
+                    styles[`slideWrap${numberSlide}__imageContainer_${index}`]
+                  }
                 >
                   <img src={item} className={styles.image} />
                 </div>
