@@ -6,6 +6,7 @@ form.loginForm * {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 16px;
 }
 
 .enter {
@@ -101,23 +102,10 @@ form.loginForm * {
   }
 }
 
-.loginForm input[type="email"] {
-  margin-bottom: 22px;
-}
 
-.loginForm input[type="password"] {
-  margin-bottom: 16px;
 
-  &::-ms-reveal {
-    display: none;
-  }
-}
-
-.loginForm input[type="text"] {
-  margin-bottom: 16px;
-}
-
-.password {
+.password,
+.email {
   position: relative;
 }
 
@@ -146,14 +134,34 @@ form.loginForm * {
   }
 }
 
-.showPassword {
+.inputError {
+  position: absolute;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  color: var(--text-dop);
+  width: 25vw;
+
+  @media (max-width: 430px) {
+    & {
+      font-size: 2.5vw;
+      margin-bottom: 23px;
+      width: 55vw;
+    }
+  }
+}
+
+.hidePassword {
   position: absolute;
   right: 10px;
   top: 25%;
   cursor: pointer;
 }
 
-.hidePassword {
+.showPassword {
   position: absolute;
   right: 8px;
   top: 21%;
@@ -170,7 +178,7 @@ form.loginForm * {
   font-size: 1.1rem;
   line-height: 1.3rem;
   color: #c8cad7;
-  margin-bottom: 42px;
+  margin-bottom: 22px;
   text-decoration: underline;
 
   @media (max-width: 430px) {
@@ -188,11 +196,9 @@ form.loginForm * {
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: #c8cad7;
-  margin-top: 16px;
-  margin-bottom: 30px;
   a {
-      margin-left: 5px;
-      text-decoration: underline;
+    margin-left: 5px;
+    text-decoration: underline;
   }
 
   @media (max-width: 430px) {

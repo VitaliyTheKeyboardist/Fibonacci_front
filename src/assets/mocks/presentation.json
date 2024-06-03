@@ -1,0 +1,41 @@
+{
+  "templateName": "minimaTemplate",
+  "title": "тема Презентации",
+  "finishTitle": "Спасибо за внимание",
+  "slides": [
+    {
+      "slideTitle": "тема слайда",
+      "slideText": "текст слайда",
+      "slideImages": [
+        {
+          "uuid": "https://hosting.org/kartinka1.png",
+          "alt": "описание картинки"
+        }
+      ]
+    },
+    {
+      "slideTitle": "тема слайда",
+      "slideText": "текст слайда",
+      "slideImages": [
+        {
+          "uuid": "https://hosting.org/kartinka2.png",
+          "alt": "описание картинки"
+        },
+        {
+          "uuid": "https://hosting.org/kartinka3.png",
+          "alt": "описание картинки"
+        }
+      ]
+    },
+    {
+      "slideTitle": "тема слайда",
+      "slideText": "текст слайда",
+      "slideImages": [
+        {
+          "uuid": "https://hosting.org/kartinka4.png",
+          "alt": "описание картинки"
+        }
+      ]
+    }
+  ]
+}
