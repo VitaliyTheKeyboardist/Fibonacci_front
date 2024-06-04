@@ -37,6 +37,7 @@ const AuthForm = () => {
     try {
       await loginUser(data)
       reset()
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setAuthorisationError(true)
       setAutorisationErrorMessage(error.response.data.detail[0].msg)

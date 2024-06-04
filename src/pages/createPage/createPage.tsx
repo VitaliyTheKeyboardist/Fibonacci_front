@@ -13,6 +13,7 @@ const CreatePage = () => {
     }
     axios
       .post("http://127.0.0.1:8000/api/presentation/create_test", data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .then((res: any) => setResult(res))
   }, [])
 

@@ -14,3 +14,4 @@ export interface IUserRegistForm {
   password: string
   re_password: string
 }
+

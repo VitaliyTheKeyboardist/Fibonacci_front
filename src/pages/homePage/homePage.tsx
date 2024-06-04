@@ -5,7 +5,7 @@ const HomePage = () => {
   const navigate = useNavigate()
   useEffect(() => {
       navigate("/login")
-  }, [])
+  })
   return null
 }
 

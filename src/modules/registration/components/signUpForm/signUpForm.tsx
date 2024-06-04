@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form"
 
 import { emailPattern } from "../../../../helpers/authConstants"
@@ -42,19 +42,16 @@ const SignUpForm = () => {
     delayError: 400,
   })
 
-  const passwordValue = watch("password")
-  const rePasswordValue = watch("re_password")
-  
  const onSubmit: SubmitHandler<IUserRegistForm> = async (data) => {
     try {
       await registUser(data)
       reset()
       console.log(data)
       navigate('/verification')
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setAuthorisationError(true)
       setAutorisationErrorMessage(error.response.data.detail)
-      console.log(error)
     }
   }
 
