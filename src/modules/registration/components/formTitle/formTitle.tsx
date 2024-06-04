@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import cross from "../../../assets/icons/pages/authentification/cross.svg"
+import cross from "../../../../assets/icons/pages/authentification/cross.svg"
 import styles from "./formTitle.module.scss"
 
 const FormTitle = () => {

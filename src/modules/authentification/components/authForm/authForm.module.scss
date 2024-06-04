@@ -104,8 +104,7 @@ form.loginForm * {
 
 
 
-.password,
-.email {
+.inputContainer {
   position: relative;
 }
 
@@ -157,14 +156,14 @@ form.loginForm * {
 .hidePassword {
   position: absolute;
   right: 10px;
-  top: 25%;
+  top: 38%;
   cursor: pointer;
 }
 
 .showPassword {
   position: absolute;
   right: 8px;
-  top: 21%;
+  top: 33%;
   height: 16px;
   width: 21px;
   fill: #c8cad7;

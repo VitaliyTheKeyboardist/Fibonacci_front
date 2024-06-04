@@ -1,17 +1,15 @@
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form"
-
-import showPassword from "../../../../assets/icons/pages/authentification/showPassword.svg"
-
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
 import { loginUser } from "../../api/authorisation"
 import { emailPattern } from "../../../../helpers/authConstants"
-
 import { IPasswordType, IUserAuthForm } from "../../../../types/authorisation"
 import { togglePasswordType } from "../../../../helpers/togglePasswordType"
 
 import Button from "../../../../components/button/button"
+import showPassword from "../../../../assets/icons/pages/authentification/showPassword.svg"
+
 import styles from "./authForm.module.scss"
 
 const AuthForm = () => {
@@ -27,10 +25,11 @@ const AuthForm = () => {
     register,
     reset,
     handleSubmit,
+
     formState: { errors },
     clearErrors,
   } = useForm<IUserAuthForm>({
-    mode: "onBlur",
+    mode: "all",
     delayError: 400,
   })
 
@@ -40,7 +39,7 @@ const AuthForm = () => {
       reset()
     } catch (error: any) {
       setAuthorisationError(true)
-      setAutorisationErrorMessage(error.response.data.detail)
+      setAutorisationErrorMessage(error.response.data.detail[0].msg)
       console.log(error)
     }
   }
@@ -53,13 +52,14 @@ const AuthForm = () => {
         className={styles.loginForm}
         onSubmit={handleSubmit(onSubmit, onError)}
       >
-        <div className={styles.email}>
+        <div className={styles.inputContainer}>
           <input
             className={!errors.email ? styles.input : styles.error}
             type="text"
             placeholder="Email"
             onFocus={() => clearErrors("email")}
             {...register("email", {
+              onChange: () => setAuthorisationError(false),
               required: "Обязательное поле",
               pattern: {
                 value: emailPattern,
@@ -71,13 +71,16 @@ const AuthForm = () => {
             <div className={styles.inputError}>{errors.email.message}</div>
           )}
         </div>
-        <div className={styles.password}>
+        <div className={styles.inputContainer}>
           <input
             className={!errors.password ? styles.passwordInput : styles.error}
             placeholder="Пароль"
             type={passwordType.type}
             onFocus={() => clearErrors("password")}
-            {...register("password", { required: "Обязательное поле" })}
+            {...register("password", {
+              onChange: () => setAuthorisationError(false),
+              required: "Обязательное поле",
+            })}
           />
           <img
             className={styles[passwordType.className]}
@@ -91,13 +94,12 @@ const AuthForm = () => {
         <Link className={styles.passwordLink} to="/reset-password">
           Забыли пароль?
         </Link>
-        {authorisationError && (
-          <div style={{ color: "var(--text-dop)" }}>
-            {autorisationErrorMessage}
-          </div>
-        )}
-        <Button content="Войти" type="submit" />
-
+        <div className={styles.inputContainer}>
+          <Button content="Войти" type="submit" />
+          {authorisationError && (
+            <div className={styles.inputError}>{autorisationErrorMessage}</div>
+          )}
+        </div>
         <span className={styles.toRegisterLink}>
           Нет аккаунта?
           <Link className={styles.toRegisterLink} to="/regist">

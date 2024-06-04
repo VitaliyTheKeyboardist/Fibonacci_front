@@ -1,15 +1,22 @@
-import showPassword from "../../../assets/icons/pages/authentification/showPassword.svg"
-
-import { useState } from "react"
-import { togglePasswordType } from "../../../helpers/togglePasswordType"
-import { IPasswordType, IUserRegistForm } from "../../../types/authorisation"
-import Button from "../../../components/button/button"
+import { useEffect, useState } from "react"
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form"
-import { emailPattern } from "../../../helpers/authConstants"
-import { passwordPattern } from "../../../constants/registConstants"
+
+import { emailPattern } from "../../../../helpers/authConstants"
+import { IPasswordType, IUserRegistForm } from "../../../../types/authorisation"
+import { passwordPattern } from "../../../../constants/registConstants"
+import { togglePasswordType } from "../../../../helpers/togglePasswordType"
+
+import Button from "../../../../components/button/button"
+import showPassword from "../../../../assets/icons/pages/authentification/showPassword.svg"
+
 import styles from "./signUpForm.module.scss"
+import { registUser } from "../../api/registration"
+import { useNavigate } from "react-router-dom"
 
 const SignUpForm = () => {
+  const [authorisationError, setAuthorisationError] = useState<boolean>(false)
+  const [autorisationErrorMessage, setAutorisationErrorMessage] =
+    useState<string>("")
   const [passwordType, setPasswordType] = useState<IPasswordType>({
     image: showPassword,
     type: "password",
@@ -21,6 +28,8 @@ const SignUpForm = () => {
     className: "hidePassword",
   })
 
+  const navigate = useNavigate()
+
   const {
     register,
     reset,
@@ -29,21 +38,28 @@ const SignUpForm = () => {
     formState: { errors },
     clearErrors,
   } = useForm<IUserRegistForm>({
-    mode: "onBlur",
+    mode: "all",
     delayError: 400,
   })
 
   const passwordValue = watch("password")
   const rePasswordValue = watch("re_password")
-
-  const onSubmit: SubmitHandler<IUserRegistForm> = async (data) => {
-    reset()
-    console.log(data)
+  
+ const onSubmit: SubmitHandler<IUserRegistForm> = async (data) => {
+    try {
+      await registUser(data)
+      reset()
+      console.log(data)
+      navigate('/verification')
+    } catch (error: any) {
+      setAuthorisationError(true)
+      setAutorisationErrorMessage(error.response.data.detail)
+      console.log(error)
+    }
   }
 
   const onError: SubmitErrorHandler<IUserRegistForm> = (data) =>
     console.log(data)
-console.log(!errors)
 
   return (
     <>
@@ -58,7 +74,8 @@ console.log(!errors)
             placeholder="Email"
             onFocus={() => clearErrors("email")}
             {...register("email", {
-              required: true,
+              onChange: () => setAuthorisationError(false),
+              required: "Обязательное поле",
               pattern: {
                 value: emailPattern,
                 message: "Введите корректный email",
@@ -74,10 +91,12 @@ console.log(!errors)
             className={!errors.password ? styles.passwordInput : styles.error}
             placeholder="Пароль"
             type={passwordType.type}
-            onFocus={() => clearErrors("password")}
+            onFocus={() => setAuthorisationError(false)}
             {...register("password", {
+              onChange: () => clearErrors(["password", "re_password"]),
               required: "Обязательное поле",
               pattern: passwordPattern,
+              validate: (value) => value === watch('re_password') || "Пароли не совпадают"
             })}
           />
           <img
@@ -96,13 +115,10 @@ console.log(!errors)
             }
             placeholder="Подтвердите пароль"
             type={passwordConfirm.type}
-            onFocus={() => clearErrors("re_password")}
             {...register("re_password", {
+              onChange: () => clearErrors(["password", "re_password"]),
               required: "Обязательное поле",
-              validate: () => {
-                if (passwordValue !== rePasswordValue)
-                  return "Пароли не совпадают"
-              },
+              validate: (value) => value === watch('password') || "Пароли не совпадают"
             })}
           />
           <img
@@ -128,7 +144,12 @@ console.log(!errors)
           Пароль должен содержать не менее 8 знаков, включать заглавные буквы,
           цифры и специальные символы
         </span>
-        <Button content="Зарегистрироваться" type="submit" />
+        <div className={styles.inputContainer}>
+          <Button content="Зарегистрироваться" type="submit" />
+          {authorisationError && (
+            <div className={styles.inputError}>{autorisationErrorMessage}</div>
+          )}
+        </div>
       </form>
     </>
   )
