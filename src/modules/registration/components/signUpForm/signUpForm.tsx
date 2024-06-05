@@ -1,9 +1,8 @@
 import { useState } from "react"
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form"
 
-import { emailPattern } from "../../../../helpers/authConstants"
 import { IPasswordType, IUserRegistForm } from "../../../../types/authorisation"
-import { passwordPattern } from "../../../../constants/registConstants"
+import { emailPattern, passwordPattern } from "../../../../constants/registConstants"
 import { togglePasswordType } from "../../../../helpers/togglePasswordType"
 
 import Button from "../../../../components/button/button"

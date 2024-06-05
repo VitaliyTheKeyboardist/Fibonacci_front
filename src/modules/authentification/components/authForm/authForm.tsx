@@ -3,7 +3,6 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 import { loginUser } from "../../api/authorisation"
-import { emailPattern } from "../../../../helpers/authConstants"
 import { IPasswordType, IUserAuthForm } from "../../../../types/authorisation"
 import { togglePasswordType } from "../../../../helpers/togglePasswordType"
 
@@ -11,6 +10,7 @@ import Button from "../../../../components/button/button"
 import showPassword from "../../../../assets/icons/pages/authentification/showPassword.svg"
 
 import styles from "./authForm.module.scss"
+import { emailPattern } from "../../../../constants/registConstants"
 
 const AuthForm = () => {
   const [authorisationError, setAuthorisationError] = useState<boolean>(false)

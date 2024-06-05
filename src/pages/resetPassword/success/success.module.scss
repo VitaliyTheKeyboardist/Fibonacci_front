@@ -1,0 +1,71 @@
+.overlay {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  background-color: #2e3042;
+  border-radius: 12px;
+  padding: 30px 20px;
+  position: absolute;
+  top: 5%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.cross {
+  position: absolute;
+  width: 1.1vw;
+  height: 12px;
+  cursor: pointer;
+  top: 22.5px;
+  right: 21.5px;
+}
+
+.enter {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ffffff;
+  @media (max-width: 430px) {
+    & {
+      font-size: 4.3vw;
+    }
+  }
+}
+
+.text {
+    width: 25vw;
+  color: #c8cad7;
+  font-family: Montserrat;
+  font-size: 14px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 42px;
+}
+
+.toRegisterLink {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #c8cad7;
+  a {
+    margin-left: 5px;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 430px) {
+    & {
+      font-size: 3vw;
+    }
+  }
+}

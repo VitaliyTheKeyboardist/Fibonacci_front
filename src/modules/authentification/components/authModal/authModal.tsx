@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 
-import cross from '../../../../assets/icons/pages/authentification/cross.svg'
+import cross from "../../../../assets/icons/pages/authentification/cross.svg"
+
+import AuthForm from "../authForm/authForm"
 
 import styles from "./authModal.module.scss"
-import AuthForm from "../authForm/authForm"
 
 const AuthModal = () => {
   return (

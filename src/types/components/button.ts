@@ -1,4 +1,4 @@
 export interface IButton {
     content: string
-    type: "submit"
+    type: "submit" | "button"
 }
