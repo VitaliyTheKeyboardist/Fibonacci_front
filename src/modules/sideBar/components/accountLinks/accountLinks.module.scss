@@ -1,0 +1,34 @@
+.linksMenu {
+  position: absolute;
+  border-radius: 6px;
+  background: #1d1e24;
+  width: 234px;
+  left: 10px;
+  transition: 0.2s;
+}
+
+.item {
+  font-size: 12px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #f5f5fa;
+  text-decoration: none;
+  display: flex;
+  padding: 12px 30px 12px 20px;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+  transition: 0.2s;
+  &:hover {
+    background-color: #2e3042;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 430px) {
+    & {
+        font-size: 11px;
+    }
+  }
+}

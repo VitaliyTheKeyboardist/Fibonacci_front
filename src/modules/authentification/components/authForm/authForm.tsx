@@ -1,6 +1,6 @@
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { loginUser } from "../../api/authorisation"
 import { IPasswordType, IUserAuthForm } from "../../../../types/authorisation"
@@ -21,11 +21,13 @@ const AuthForm = () => {
     type: "password",
     className: "hidePassword",
   })
+
+  const navigate = useNavigate()
+
   const {
     register,
     reset,
     handleSubmit,
-
     formState: { errors },
     clearErrors,
   } = useForm<IUserAuthForm>({
@@ -37,6 +39,7 @@ const AuthForm = () => {
     try {
       await loginUser(data)
       reset()
+      navigate('/private-profile')
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setAuthorisationError(true)

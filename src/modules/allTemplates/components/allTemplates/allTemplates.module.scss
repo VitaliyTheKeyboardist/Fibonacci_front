@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  word-break: break-all;
+  box-sizing: border-box;
+  padding: 26px;
+}
+
+.title {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 28px;
+}
+
+.templatesBlock {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}

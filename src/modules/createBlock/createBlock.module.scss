@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+}
+
+.blocTabs {
+  display: flex;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f1014;
+  color: #a6a7b1;
+  font-size: 14px;
+  box-sizing: content-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  width: 50%;
+  height: 51px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.activeTabs {
+  composes: tabs;
+  outline: none;
+  border-bottom: 1px solid #f5f5fa;
+}

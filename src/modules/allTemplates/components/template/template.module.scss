@@ -1,0 +1,25 @@
+.text {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 22px 0;
+}
+
+.selected {
+  width: 306px;
+  height: 176px;
+  border: 2px solid #3a48e1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.img {
+  width: 306px;
+  height: 176px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}

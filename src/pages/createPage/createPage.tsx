@@ -1,7 +1,9 @@
+import CreateBlock from "../../modules/createBlock/createBlock"
+
 const CreatePage = () => {
 
 
-  return <div>CreatePage</div>
+  return <CreateBlock />
 }
 
 export default CreatePage

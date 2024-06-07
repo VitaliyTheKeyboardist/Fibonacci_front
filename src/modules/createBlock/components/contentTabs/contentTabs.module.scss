@@ -1,0 +1,121 @@
+.activeContent {
+  color: #f5f5fa;
+  padding: 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.errorPopupWrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.errorPopup {
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  margin: 0 auto;
+  gap: 12px;
+  border-radius: 6px;
+  background: #1d1e24;
+  box-shadow: 0px 4px 12px 0px rgba(26, 26, 33, 0.42);
+  z-index: 10;
+  text-align: start;
+  position: absolute;
+  width: 29vw;
+  transition: 0.2s;
+  height: 50px;
+  p {
+    color: #db4949;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textInput {
+  margin-top: 60px;
+  margin-bottom: 16px;
+  width: 53vw;
+  height: 26vw;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px dashed #c8cad7;
+  background: #1d1e24;
+  padding: 18px;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  &::placeholder {
+    color: #c8cad7;
+    font-size: 14px;
+    font-family: Montserrat;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.themeInput {
+    composes: textInput;
+    height: 6vw;
+}
+
+.btn {
+    display: inline-flex;
+    height: 40px;
+    padding: 16px 22px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #373840;
+    cursor: auto;
+    border: none;
+    transition: 0.2s;
+    color: #a6a7b1;
+    text-align: center;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .btnActive {
+    composes: btn;
+    cursor: pointer;
+    color: #f5f5fa;
+    background: #3a48e1;
+    &:hover {
+      background: #2b38cd;
+    }
+  }

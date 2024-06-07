@@ -1,0 +1,36 @@
+.presentationItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.img {
+  width: 323px;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #1d1e24;
+  margin-bottom: 18px;
+}
+
+.name {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.updated {
+  color: #a6a7b1;
+  background: var(--backgorund);
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.link {
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    padding: 26px;
+}
+
+.text {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 28px;
+  @media (max-width: 900px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.presentationsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
