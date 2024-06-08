@@ -1,7 +1,7 @@
 import { IPresentationCard } from "../../../../types/components/presentationCard"
 import styles from "./presentationCard.module.scss"
 
-const PresentationCard = ({ title, template }: IPresentationCard) => {
+const PresentationCard = ({ title }: IPresentationCard) => {
   return (
     <div className={styles.presentationItem}>
       <div className={styles.img}></div>

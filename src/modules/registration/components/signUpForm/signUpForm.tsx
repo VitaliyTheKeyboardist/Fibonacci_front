@@ -141,7 +141,7 @@ const SignUpForm = () => {
           цифры и специальные символы
         </span>
         <div className={styles.inputContainer}>
-          <Button content="Зарегистрироваться" type="submit" />
+          <Button content="Зарегистрироваться" className="submit" type="submit" />
           {authorisationError && (
             <div className={styles.inputError}>{autorisationErrorMessage}</div>
           )}

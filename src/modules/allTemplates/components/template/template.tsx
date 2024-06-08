@@ -5,7 +5,7 @@ const Template = ({ id, item, setId }: ITemplate) => {
   return (
     <div className={styles.templateItem}>
       <img
-        className={id === item.id ? styles["selected"] : styles.img}
+        className={id && id === item.id ? styles["selected"] : styles.img}
         src={item.img}
         id={item.id}
         onClick={setId}

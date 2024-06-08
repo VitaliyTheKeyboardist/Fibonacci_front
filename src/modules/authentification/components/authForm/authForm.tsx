@@ -99,7 +99,7 @@ const AuthForm = () => {
           Забыли пароль?
         </Link>
         <div className={styles.inputContainer}>
-          <Button content="Войти" type="submit" />
+          <Button content="Войти" className="submit"type="submit" />
           {authorisationError && (
             <div className={styles.inputError}>{autorisationErrorMessage}</div>
           )}

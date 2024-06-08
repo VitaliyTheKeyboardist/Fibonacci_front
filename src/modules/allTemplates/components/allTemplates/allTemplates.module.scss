@@ -16,8 +16,41 @@
 }
 
 .templatesBlock {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.templateItemBlock {
+  position: relative;
+  &:hover {
+    .templateCard {
+      filter: brightness(0.5);
+      z-index: 0;
+      transition: 0.5s;
+    }
+  }
+}
+
+.templateCard {
+  position: relative;
+  z-index: 1;
+  &:hover {
+    filter: brightness(0.5);
+    z-index: 0;
+  }
+}
+
+.templateAction {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  opacity: 1;
+  z-index: 0;
+  &:hover {
+    opacity: 1;
+    z-index: 2;
+  }
 }

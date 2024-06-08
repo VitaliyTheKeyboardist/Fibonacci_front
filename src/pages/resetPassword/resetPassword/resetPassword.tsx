@@ -29,7 +29,7 @@ const ResetPassword = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <Button type="submit" content="Далее" />
+          <Button type="submit" className="submit" content="Далее" />
           <span className={styles.toRegisterLink}>
             Нет аккаунта?
             <Link className={styles.toRegisterLink} to="/register">

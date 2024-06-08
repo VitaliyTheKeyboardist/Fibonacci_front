@@ -8,9 +8,9 @@ export interface ITemplateItem {
 
 
 export interface ITemplate {
-    id: string
+    id?: string
     item: ITemplateItem
-    setId: (e: MouseEvent) => void
+    setId?: (e: MouseEvent) => void
 }
 
 export type ITemplates = ITemplateItem[]

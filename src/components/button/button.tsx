@@ -1,9 +1,9 @@
 import { IButton } from "../../types/components/button"
 import styles from "./button.module.scss"
 
-const Button = ({ content, type }: IButton) => {
+const Button = ({ className, content, type, onClick }: IButton) => {
   return (
-    <button className={styles[type]} type={type} >
+    <button className={styles[className]} type={type} onClick={onClick}>
       {content}
     </button>
   )

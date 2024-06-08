@@ -8,7 +8,7 @@ const MenuLink = ({ text, link, img, alt, end }: IMenuLink) => {
     <NavLink
       className={({ isActive }) => (isActive ? styles.active : styles.navLink)}
       to={link}
-      end
+      end={end}
     >
       <img className={styles.linkImg} src={img} alt={alt} />
       <div>{text}</div>

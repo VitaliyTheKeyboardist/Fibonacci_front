@@ -1,4 +1,4 @@
 export interface IPresentationCard {
     title: string
-    template: string
+    template?: string
 }

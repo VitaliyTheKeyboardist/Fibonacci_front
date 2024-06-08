@@ -39,3 +39,9 @@
 .submit:disabled:hover {
   background-color: var(--text-dop);
 }
+
+.button_template {
+  composes: button;
+  width: fit-content;
+  transition: none;
+}
