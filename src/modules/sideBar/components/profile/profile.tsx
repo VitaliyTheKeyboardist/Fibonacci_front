@@ -25,7 +25,7 @@ const Profile = ({ user }: IProfile) => {
           />
         </div>
         <div className={styles.userInfo}>
-          <span className={styles.userName}>Виталий</span>
+          <span className={styles.userName}>{user.name || ""}</span>
           <span className={styles.userEmail}>{user.email}</span>
         </div>
         <div className={styles.arrow}>

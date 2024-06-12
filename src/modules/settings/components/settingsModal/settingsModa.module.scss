@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 22px;
+  border-radius: 8px;
+  background: #373840;
+  width: 50vw;
+  box-sizing: border-box;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  right: 0;
+  gap: 36px;
+
+  @media (max-width: 700px) {
+    & {
+      width: 90vw;
+      padding: 20px 15px;
+      gap: 20px;
+      left: 4%;
+      top: 10%;
+    }
+  }
+}
+
+.cross {
+  position: absolute;
+  width: 1.1vw;
+  height: 12px;
+  cursor: pointer;
+  top: 22.5px;
+  right: 21.5px;
+}
+
+.title {
+    width: 100%;
+    border-bottom: 1px solid #f5f5fa;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #f5f5fa;
+}
+
+.formBlock {
+  display: flex;
+  gap: 30px;
+}

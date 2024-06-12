@@ -3,4 +3,5 @@ export interface IButton {
     content: string
     type: "submit" | "button" 
     onClick?: () => void | undefined
+    disabled?: boolean
 }

@@ -1,8 +1,8 @@
-import React from 'react'
+import SettingsModal from "../../modules/settings/components/settingsModal/settingsModal"
 
 const SettingsPage = () => {
   return (
-    <div>SettingsPage</div>
+    <SettingsModal />
   )
 }
 
