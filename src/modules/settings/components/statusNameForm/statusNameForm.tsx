@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction, useState } from "react"
+import { useState } from "react"
 import { useAppDispatch } from "../../../../hooks/reduxToolkitHooks"
 
 import { IStatusNameForm } from "../../../../types/components/statusNameForm"
@@ -9,19 +9,12 @@ import tabsArrow from "../../../../assets/icons/pages/privateProfile/tabsArrow.s
 import Button from "../../../../components/button/button"
 
 import styles from "./statusNameForm.module.scss"
+import { handleChange } from "../../../../helpers/handleChange"
 
 const StatusNameForm = ({ user }: IStatusNameForm) => {
   const [name, setName] = useState<string>("")
   const [status, setStatus] = useState<string>("")
   const dispatch = useAppDispatch()
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    setFunction: Dispatch<SetStateAction<string>>
-  ) => {
-    e.preventDefault()
-    setFunction(e.target.value)
-  }
 
   function handleClick(name: string, status: string) {
     try {
@@ -54,24 +47,18 @@ const StatusNameForm = ({ user }: IStatusNameForm) => {
             required
             onChange={(e) => handleChange(e, setStatus)}
           >
-            <option className={styles.option} defaultChecked>
+            <option className={styles.option} value="" defaultChecked>
               Выберите статус
             </option>
             <option className={styles.option} value="STUDENT">
               Студент
             </option>
-            {/* <option className={styles.option} value="pupil">
-              Школьник
-            </option> */}
             <option className={styles.option} value="WORKER">
               Преподаватель/Учитель
             </option>
             <option className={styles.option} value="RETIREE">
               Пенсионер
             </option>
-            {/* <option className={styles.option} value="other">
-              Другое
-            </option> */}
           </select>
         </div>
         <Button
