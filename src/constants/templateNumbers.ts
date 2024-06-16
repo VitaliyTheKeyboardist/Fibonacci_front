@@ -1,5 +1,4 @@
 export interface ITemplateNumbers {
-    0: string
     1: string
     2: string
     3: string
@@ -23,32 +22,39 @@ export interface ITemplateNumbers {
     21: string
     22: string
     23: string
+    24: string
+    25: string
+    26: string
+    27: string
 }
 
 
 export const templateNumbers: ITemplateNumbers = {
-    0: "ONE",
-    1: "TWO",
-    2: "THREE",
-    3: "ONE",
-    4: "TWO",
-    5: "THREE",
-    6: "ONE",
-    7: "TWO",
-    8: "THREE",
-    9: "ONE",
-    10: "TWO",
-    11: "THREE",
-    12: "ONE",
-    13: "TWO",
-    14: "THREE",
-    15: "ONE",
-    16: "TWO",
-    17: "THREE",
-    18: "ONE",
-    19: "TWO",
-    20: "THREE",
-    21: "ONE",
-    22: "TWO",
-    23: "THREE",
+    1: "ONE",
+    2: "TWO",
+    3: "THREE",
+    4: "ONE",
+    5: "TWO",
+    6: "THREE",
+    7: "ONE",
+    8: "TWO",
+    9: "THREE",
+    10: "ONE",
+    11: "TWO",
+    12: "THREE",
+    13: "ONE",
+    14: "TWO",
+    15: "THREE",
+    16: "ONE",
+    17: "TWO",
+    18: "THREE",
+    19: "ONE",
+    20: "TWO",
+    21: "THREE",
+    22: "ONE",
+    23: "TWO",
+    24: "THREE",
+    25: "ONE",
+    26: "TWO",
+    27: "THREE",
 }

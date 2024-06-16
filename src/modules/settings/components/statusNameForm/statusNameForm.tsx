@@ -34,7 +34,7 @@ const StatusNameForm = ({ user }: IStatusNameForm) => {
           className={styles.input}
           type="text"
           name="username"
-          placeholder={user.name || "Dbnfkbq"}
+          placeholder={user.name || "Введите имя"}
           value={name}
           onChange={(e) => handleChange(e, setName)}
         />

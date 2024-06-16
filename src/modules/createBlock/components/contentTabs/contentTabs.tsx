@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom"
 import error from "../../../../assets/icons/pages/privateProfile/error.svg"
+import { useAppDispatch } from "../../../../hooks/reduxToolkitHooks"
 import { IContentTabs } from "../../../../types/components/contentTabs"
+import { presentationCreate } from "../../api/presentationCreate"
 
 import styles from "./contentTabs.module.scss"
 
@@ -11,6 +14,20 @@ const ContentTabs = ({
   maxCount,
   placeholder,
 }: IContentTabs) => {
+
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+  const template = "1"
+
+  const handleClick = async () =>{
+    try {
+      await presentationCreate(dispatch, value, template)
+      navigate(`/presentation`)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className={styles.contentTabs}>
       <div className={styles.activeContent}>
@@ -42,6 +59,7 @@ const ContentTabs = ({
           <button
             className={!count ? styles.btn : styles.btnActive}
             disabled={!count}
+            onClick={handleClick}
           >
             Продолжить
           </button>

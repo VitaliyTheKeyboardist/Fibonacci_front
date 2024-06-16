@@ -1,5 +1,4 @@
-import { ISlide } from "../../../assets/mocks/minimaTemplateMocks"
-
+import { ISlide } from "../../../types/components/presentation"
 import styles from "./slide.module.scss"
 
 export interface IMinimalSlide {
@@ -14,19 +13,27 @@ const Slide = ({ numberSlide, content }: IMinimalSlide) => {
         <div className={styles.container}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
-              {content.slideTitle}
+              {content.title}
             </div>
             <div className={styles[`slideWrap${numberSlide}__text`]}>
-              {content.slideText}
+              {content.text}
             </div>
-            {content.slideImage.map((item) => {
-              return (
-                <div
-                  className={styles[`slideWrap${numberSlide}__imageContainer`]}
-                >
-                  <img src={item} className={styles.image} />
-                </div>
-              )
+            {content.images.map((image, index) => {
+              if (index < 1) return (
+                
+                  <div
+                    key={image.api_url}
+                    className={
+                      styles[`slideWrap${numberSlide}__imageContainer`]
+                    }
+                  >
+                    <img
+                      src={image.api_url}
+                      className={styles.image}
+                      alt={image.description}
+                    />
+                  </div>
+                )
             })}
           </div>
         </div>
@@ -36,19 +43,24 @@ const Slide = ({ numberSlide, content }: IMinimalSlide) => {
         <div className={styles.container}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
-              {content.slideTitle}
+              {content.title}
             </div>
             <div className={styles[`slideWrap${numberSlide}__text`]}>
-              {content.slideText}
+              {content.text}
             </div>
-            {content.slideImage.map((item, index) => {
-              return (
+            {content.images.map((image, index) => {
+              if (index < 2) return (
                 <div
+                  key={image.api_url}
                   className={
                     styles[`slideWrap${numberSlide}__imageContainer_${index}`]
                   }
                 >
-                  <img src={item} className={styles.image} />
+                  <img
+                    src={image.api_url}
+                    className={styles.image}
+                    alt={image.description}
+                  />
                 </div>
               )
             })}
@@ -60,17 +72,22 @@ const Slide = ({ numberSlide, content }: IMinimalSlide) => {
         <div className={styles.container}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
-              {content.slideTitle}
+              {content.title}
             </div>
             <div className={styles[`slideWrap${numberSlide}__text`]}>
-              {content.slideText}
+              {content.text}
             </div>
-            {content.slideImage.map((item) => {
-              return (
+            {content.images.map((image, index) => {
+              if (index < 1) return (
                 <div
+                key={image.api_url}
                   className={styles[`slideWrap${numberSlide}__imageContainer`]}
                 >
-                  <img src={item} className={styles.image} />
+                  <img
+                    src={image.api_url}
+                    className={styles.image}
+                    alt={image.description}
+                  />
                 </div>
               )
             })}

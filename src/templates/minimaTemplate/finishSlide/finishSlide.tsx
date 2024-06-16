@@ -1,4 +1,3 @@
-// import { templateContent } from "../../../assets/mocks/minimaTemplateMocks"
 
 import styles from "./finishSlide.module.scss"
 

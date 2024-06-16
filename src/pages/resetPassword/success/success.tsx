@@ -19,7 +19,7 @@ const Success = () => {
             </span>
     
             <Link to="/login">
-              <Button type="button" content="Войти заново" />
+              <Button className="button" type="button" content="Войти заново" />
             </Link>
     
             <span className={styles.toRegisterLink}>

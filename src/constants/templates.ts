@@ -16,3 +16,5 @@ export const templates: ITemplates = [
     { id: "classic", img: classicTemplate, title: "Классический" },
     { id: "techno", img: technoTemplate, title: "Техно" },
   ]
+
+  

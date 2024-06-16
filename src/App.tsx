@@ -21,7 +21,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<AuthPage />} />
         <Route path="/regist" element={<RegistPage />} />
-        <Route path="/minimaTemplate" element={<MinimaTemplate />} />
         <Route path="/verification" element={<VerificationPage />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/success" element={<Success />} />
@@ -31,6 +30,8 @@ function App() {
           <Route path="all-presentations" element={<AllPresentationsPage />} />
           <Route path="all-templates" element={<AllTemplatesPage />} />
         </Route>
+        <Route path="/presentation" element={<MinimaTemplate />} />
+        <Route path="/presentation/:uuid" element={<MinimaTemplate />} />
       </Routes>
     </>
   )

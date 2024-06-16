@@ -4,11 +4,11 @@ import { getUser } from "../../store/slices/userSlice"
 import Profile from "./components/profile/profile"
 import NavBar from "./components/navBar/navBar"
 
-import styles from './sideBar.module.scss'
+import styles from "./sideBar.module.scss"
 
 const SideBar = () => {
   const dispatch = useAppDispatch()
-  const user = useAppSelector((state) => state.user.user)
+  const user = useAppSelector((store) => store.user.user)
 
   useEffect(() => {
     dispatch(getUser())
