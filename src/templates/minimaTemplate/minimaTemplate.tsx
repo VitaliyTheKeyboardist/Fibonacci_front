@@ -13,7 +13,7 @@ import styles from "./minimaTemplate.module.scss"
 
 const MinimaTemplate = () => {
   const { presentation } = useAppSelector((store) => store.presentation)
-  const finishIndex = 11
+  const finishIndex = presentation.slides.length - 1
 
   if (!presentation.title)
     return (
@@ -33,17 +33,18 @@ const MinimaTemplate = () => {
           {presentation.slides.map((item: ISlide, index) => {
             return (
               <>
-                {index === 0 && <TitleSlide type="presentation" title={item.title} />}
+                {index === 0 && <TitleSlide key={item.title} type="presentation" title={item.title} />}
                 {index > 0 && index < finishIndex && (
                   <Slide
+                  type="container"
                     numberSlide={
                       templateNumbers[index as keyof ITemplateNumbers]
                     }
                     content={item}
-                    key={index}
+                    key={item.title}
                   />
                 )}
-                {index === finishIndex && <FinishSlide />}
+                {index === finishIndex && <FinishSlide type="presentation"  key={item.title} />}
               </>
             )
           })}

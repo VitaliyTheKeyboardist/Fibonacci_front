@@ -39,11 +39,13 @@ const AuthForm = () => {
     try {
       await loginUser(data)
       reset()
-      navigate('/private-profile')
+      navigate("/private-profile")
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setAuthorisationError(true)
-      setAutorisationErrorMessage(error.response.data.detail[0].msg)
+      setAutorisationErrorMessage(
+        error.response.data.detail[0].msg || error.response.data.detail
+      )
       console.log(error)
     }
   }
@@ -94,15 +96,15 @@ const AuthForm = () => {
           {errors.password && (
             <div className={styles.inputError}>{errors.password.message}</div>
           )}
+          {authorisationError && (
+            <div className={styles.inputError}>{autorisationErrorMessage}</div>
+          )}
         </div>
         <Link className={styles.passwordLink} to="/reset-password">
           Забыли пароль?
         </Link>
         <div className={styles.inputContainer}>
-          <Button content="Войти" className="submit"type="submit" />
-          {authorisationError && (
-            <div className={styles.inputError}>{autorisationErrorMessage}</div>
-          )}
+          <Button content="Войти" className="submit" type="submit" />
         </div>
         <span className={styles.toRegisterLink}>
           Нет аккаунта?

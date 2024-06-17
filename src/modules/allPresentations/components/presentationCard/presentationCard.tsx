@@ -12,7 +12,7 @@ const PresentationCard = ({ title, uuid }: IPresentationCard) => {
   
   const handleClick = async () => {
     await dispatch(getPresentation(uuid))
-    navigate(`/presentation/${uuid}`)
+    navigate(`/presentation/${uuid}/slide/0`)
   }
   
 

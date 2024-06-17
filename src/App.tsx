@@ -13,6 +13,8 @@ import PrivateProfile from "./pages/privateProfile/privateProfile"
 import SettingsPage from "./pages/settingsPage/settingsPage"
 import AllPresentationsPage from "./pages/allPresentationsPage/allPresentationsPage"
 import AllTemplatesPage from "./pages/allTemplatesPage/allTemplatesPage"
+import OnePresentationPage from "./pages/onePresentationPage/onePresentationPage"
+import BigSlide from "./modules/presentationNavBar/components/bigSlide/bigSlide"
 
 function App() {
   return (
@@ -30,8 +32,10 @@ function App() {
           <Route path="all-presentations" element={<AllPresentationsPage />} />
           <Route path="all-templates" element={<AllTemplatesPage />} />
         </Route>
-        <Route path="/presentation" element={<MinimaTemplate />} />
-        <Route path="/presentation/:uuid" element={<MinimaTemplate />} />
+        {/* <Route path="/presentation" element={<OnePresentationPage />} /> */}
+        <Route path="/presentation/:uuid" element={<OnePresentationPage />}>
+          <Route index path="slide/:index" element={<BigSlide />} />
+        </Route>
       </Routes>
     </>
   )

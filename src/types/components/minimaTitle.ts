@@ -1,4 +1,4 @@
 export interface ITitlSlide {
-  type: "presentationList" | "presentation"
+  type: "presentationList" | "presentation" | "bigSlide"
   title: string
 }

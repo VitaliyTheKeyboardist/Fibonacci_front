@@ -2,15 +2,16 @@ import { ISlide } from "../../../types/components/presentation"
 import styles from "./slide.module.scss"
 
 export interface IMinimalSlide {
+  type: "navList" | "container" | "bigSlide"
   numberSlide: string
   content: ISlide
 }
 
-const Slide = ({ numberSlide, content }: IMinimalSlide) => {
+const Slide = ({ type, numberSlide, content }: IMinimalSlide) => {
   switch (numberSlide) {
     case "ONE":
       return (
-        <div className={styles.container}>
+        <div className={styles[type]}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
@@ -40,7 +41,7 @@ const Slide = ({ numberSlide, content }: IMinimalSlide) => {
       )
     case "TWO":
       return (
-        <div className={styles.container}>
+        <div className={styles[type]}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
@@ -69,7 +70,7 @@ const Slide = ({ numberSlide, content }: IMinimalSlide) => {
       )
     case "THREE":
       return (
-        <div className={styles.container}>
+        <div className={styles[type]}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}

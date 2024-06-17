@@ -4,12 +4,25 @@
   margin-bottom: 10px;
 }
 
+.navList {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.bigSlide {
+  margin: auto;
+  width: 60vw;
+  height: 33.75vw;
+}
+
 .slideWrap {
   position: relative;
   width: 100%;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
+  border-radius: inherit;
 }
 
 .slideWrap__title {
@@ -18,17 +31,17 @@
   left: 5%;
   height: 15%;
   width: 50%;
-  font-size: 2.5vw;
+  font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .slideWrap__text {
   position: absolute;
-  top: 25%;
+  top: 31%;
   left: 5%;
   width: 45%;
-  font-size: 1.5vw;
+  font-size: 0.6rem;
   font-weight: 400;
 }
 
@@ -39,7 +52,7 @@
   width: 36%;
   height: 53%;
   background-color: #e0e0e0;
-  border-radius: calc(100vw / 32);
+  border-radius: 7%;
 }
 
 .slideWrapONE {
@@ -94,7 +107,7 @@
   left: 10.5%;
   width: 28.6%;
   height: 30.3%;
-  border-radius: calc(100vw / 50);
+  border-radius: 7%;
 }
 .slideWrapTWO__imageContainer_1 {
   composes: slideWrap__imageContainer;
@@ -102,7 +115,7 @@
   right: 10.5%;
   width: 28.6%;
   height: 30.3%;
-  border-radius: calc(100vw / 50);
+  border-radius: 7%;
 }
 
 .slideWrapTHREE__imageContainer {
@@ -111,9 +124,9 @@
   height: 100%;
   right: 0%;
   top: 0%;
-  border-radius: 0px;
-  border-top-left-radius: calc(100vw / 24);
-  border-bottom-left-radius: calc(100vw / 24);
+  border-radius: inherit;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
 }
 
 .image {

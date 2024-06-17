@@ -14,5 +14,6 @@ export interface ISlide {
 export interface IPresentation {
     title: string
     template: string
+    uuid: string
     slides: ISlide[]
 }

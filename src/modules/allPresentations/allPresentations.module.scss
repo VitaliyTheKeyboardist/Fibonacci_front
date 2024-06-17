@@ -1,6 +1,6 @@
 .container {
-    width: 100%;
-    padding: 26px;
+  width: 100%;
+  padding: 26px;
 }
 
 .text {
@@ -22,4 +22,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.title {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.titleLink {
+  text-decoration: underline;
+  text-underline-position: under;
 }

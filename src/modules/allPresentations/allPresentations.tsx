@@ -1,29 +1,48 @@
-// import PresentationCard from "./components/presentationCard/presentationCard"
-
-import styles from "./allPresentations.module.scss"
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxToolkitHooks"
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxToolkitHooks"
+
 import PresentationCard from "./components/presentationCard/presentationCard"
+
 import { getAllPresentations } from "./api/getAllPresentations"
 
-const AllPresentations = () => {
+import styles from "./allPresentations.module.scss"
 
+const AllPresentations = () => {
   const dispatch = useAppDispatch()
-  const allPresentations = useAppSelector((store) => store.allPresentations.presentations)
+  const allPresentations = useAppSelector(
+    (store) => store.allPresentations.presentations
+  )
 
   useEffect(() => {
     dispatch(getAllPresentations())
   }, [dispatch])
-  
+
+  if (allPresentations.length === 0)
+    return (
+      <div className={styles.container}>
+        <h2 className={styles.title}>
+          У вас нет ни одной презентации. Хотите{" "}
+          <Link to="/private-profile" className={styles.titleLink}>
+            создать?
+          </Link>
+        </h2>
+      </div>
+    )
   return (
     <div className={styles.container}>
       <div className={styles.text}>
         <span>Все презентации</span>
       </div>
       <div className={styles.presentationsList}>
-        
         {allPresentations.map((item) => {
-          return <PresentationCard title={item.title} uuid={item.uuid} />
+          return (
+            <PresentationCard
+              key={item.uuid}
+              title={item.title}
+              uuid={item.uuid}
+            />
+          )
         })}
       </div>
     </div>

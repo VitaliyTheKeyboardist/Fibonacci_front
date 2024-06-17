@@ -32,3 +32,29 @@
   font-size: 1.5vw;
   font-weight: 400;
 }
+
+.listContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.listTitleWrap {
+    composes: titleWrap;
+    border-radius: 8px;
+}
+
+.listTitle {
+    composes: title;
+    font-size: 1rem;
+}
+
+.listText {
+  composes: text;
+  font-size: 0.5rem;
+}
+
+.bigSlide {
+  margin: auto;
+  width: 60vw;
+  height: 33.75vw;
+}

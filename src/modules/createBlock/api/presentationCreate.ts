@@ -13,6 +13,7 @@ export const presentationCreate = async (
         dispatch(presentationFetching())
         const response = await $api.post<IPresentation>(`${URLS.CREATE_PRESENTATION}`, { title, template})
         dispatch(presentationFetchingSuccess(response.data))
+        return response.data
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error:any) {
         dispatch(presentationFetchingError(error.message))        

@@ -25,7 +25,7 @@ const allPresentationsSlice = createSlice({
       action: PayloadAction<IPresentationItem[]>
     ) {
       state.isLoading = false
-      state.presentations = action.payload
+      state.presentations = action.payload.reverse()
     },
     allPresentationsFetchingError(state, action: PayloadAction<string>) {
       state.isLoading = false
