@@ -15,17 +15,16 @@ const PresentationNavBar = () => {
   const { presentation } = useAppSelector((store) => store.presentation)
   const finishIndex = presentation.slides.length - 1
 
-  
+
   return (
     <nav className={styles.navigationContainer}>
       {presentation.slides.map((item: ISlide, index) => {
         return (
-          <div className={styles.slideWrap}>
+          <div className={styles.slideWrap} key={item.title}>
             <div className={styles.numberSlide}>{index + 1}</div>
             <Link
               to={`slide/${index}`}
               className={styles.slideContainer}
-              key={item.title}
             >
               {index === 0 && (
                 <TitleSlide type="presentationList" title={item.title} />
