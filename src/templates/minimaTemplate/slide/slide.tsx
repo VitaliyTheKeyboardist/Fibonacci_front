@@ -20,8 +20,8 @@ const Slide = ({ type, numberSlide, content }: IMinimalSlide) => {
               {content.text}
             </div>
             {content.images.map((image, index) => {
-              if (index < 1) return (
-                
+              if (index < 1)
+                return (
                   <div
                     key={image.api_url}
                     className={
@@ -50,20 +50,21 @@ const Slide = ({ type, numberSlide, content }: IMinimalSlide) => {
               {content.text}
             </div>
             {content.images.map((image, index) => {
-              if (index < 2) return (
-                <div
-                  key={image.api_url}
-                  className={
-                    styles[`slideWrap${numberSlide}__imageContainer_${index}`]
-                  }
-                >
-                  <img
-                    src={image.api_url}
-                    className={styles.image}
-                    alt={image.description}
-                  />
-                </div>
-              )
+              if (index < 2)
+                return (
+                  <div
+                    key={image.api_url}
+                    className={
+                      styles[`slideWrap${numberSlide}__imageContainer_${index}`]
+                    }
+                  >
+                    <img
+                      src={image.api_url}
+                      className={styles.image}
+                      alt={image.description}
+                    />
+                  </div>
+                )
             })}
           </div>
         </div>
@@ -79,18 +80,21 @@ const Slide = ({ type, numberSlide, content }: IMinimalSlide) => {
               {content.text}
             </div>
             {content.images.map((image, index) => {
-              if (index < 1) return (
-                <div
-                key={image.api_url}
-                  className={styles[`slideWrap${numberSlide}__imageContainer`]}
-                >
-                  <img
-                    src={image.api_url}
-                    className={styles.image}
-                    alt={image.description}
-                  />
-                </div>
-              )
+              if (index < 1)
+                return (
+                  <div
+                    key={image.api_url}
+                    className={
+                      styles[`slideWrap${numberSlide}__imageContainer`]
+                    }
+                  >
+                    <img
+                      src={image.api_url}
+                      className={styles.image}
+                      alt={image.description}
+                    />
+                  </div>
+                )
             })}
           </div>
         </div>
