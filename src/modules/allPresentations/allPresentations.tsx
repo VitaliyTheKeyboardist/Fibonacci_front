@@ -11,7 +11,7 @@ import styles from "./allPresentations.module.scss"
 const AllPresentations = () => {
   const dispatch = useAppDispatch()
   const allPresentations = useAppSelector(
-    (store) => store.allPresentations.presentations
+    (state) => state.allPresentations.presentations
   )
 
   useEffect(() => {

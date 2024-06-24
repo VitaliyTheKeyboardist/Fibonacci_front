@@ -3,16 +3,17 @@ import {
   ITemplateNumbers,
   templateNumbers,
 } from "../../constants/templateNumbers"
-import { useAppSelector } from "../../hooks/reduxToolkitHooks"
 import FinishSlide from "../../templates/minimaTemplate/finishSlide/finishSlide"
 import Slide from "../../templates/minimaTemplate/slide/slide"
 import TitleSlide from "../../templates/minimaTemplate/titleSlide/titleSlide"
 import { ISlide } from "../../types/components/presentation"
+import { IPresentationNavBar } from "../../types/components/presentationNavBar"
+
 import styles from "./presentationNavBar.module.scss"
 
-const PresentationNavBar = () => {
 
-  const { presentation } = useAppSelector((store) => store.presentation)
+const PresentationNavBar = ({ presentation }: IPresentationNavBar) => {
+
   const finishIndex = presentation.slides.length - 1
 
 

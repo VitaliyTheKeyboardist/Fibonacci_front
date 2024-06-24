@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import Slide from "../../../../templates/minimaTemplate/slide/slide"
 import TitleSlide from "../../../../templates/minimaTemplate/titleSlide/titleSlide"
 import {
@@ -8,19 +8,11 @@ import {
 import { useAppSelector } from "../../../../hooks/reduxToolkitHooks"
 import FinishSlide from "../../../../templates/minimaTemplate/finishSlide/finishSlide"
 
-import { useEffect } from "react"
-
 const BigSlide = () => {
-
   const { presentation } = useAppSelector((store) => store.presentation)
-  const navigate = useNavigate()
   const params = useParams()
   const index = Number(params.index)
   const item = presentation.slides[index]
-
-  useEffect(() => {
-    if (!item) navigate("/private-profile/all-presentations")
-  }, [item, navigate])
 
   if (item)
     return (
@@ -38,8 +30,6 @@ const BigSlide = () => {
         {index === 11 && <FinishSlide type="bigSlide" key={item.title} />}
       </>
     )
-  
-  }
-
+}
 
 export default BigSlide

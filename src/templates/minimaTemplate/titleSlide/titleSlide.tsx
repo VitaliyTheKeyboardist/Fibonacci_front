@@ -11,6 +11,14 @@ const TitleSlide = ({ type, title }: ITitlSlide) => {
         </div>
       </div>
     )
+  if (type === "presentationCard")
+    return (
+      <div className={styles.listContainer}>
+        <div className={styles.listTitleWrap}>
+          <h1 className={styles.cardTitle}>{title}</h1>
+        </div>
+      </div>
+    )
   if (type === "bigSlide")
     return (
       <div className={styles.bigSlide}>

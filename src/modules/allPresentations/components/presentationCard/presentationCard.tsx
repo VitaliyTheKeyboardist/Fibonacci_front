@@ -19,7 +19,7 @@ const PresentationCard = ({ title, uuid }: IPresentationCard) => {
   return (
     <div className={styles.presentationItem}>
       <div className={styles.img}>
-        <TitleSlide type="presentationList" title={title}/>
+        <TitleSlide type="presentationCard" title={title}/>
       </div>
       <span className={styles.name}>{title}</span>
       <button className={styles.updated} onClick={handleClick}>ОТКРЫТЬ</button>

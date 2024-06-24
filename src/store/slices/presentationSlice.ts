@@ -8,6 +8,7 @@ const initialState = {
   presentation: {
     title: "",
     template: "",
+    uuid: "",
     slides: [
       {
         title: "",
@@ -27,7 +28,6 @@ const initialState = {
 
 export const getPresentation = (presentationUUID: string) => async (
   dispatch: AppDispatch,
-//   presentationUUID: string
 ) => {
   try {
     dispatch(presentationFetching())

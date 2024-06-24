@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.name {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: #A6A7B1;
+    align-self: center;
+}
+.nameBlock {
+    display: flex;
+    height: 24px;
+    justify-content: space-between;
+    margin-left: 16px;
+    gap: 20px;
+}
+.buttonBack {
+    background-color: var(--background);
+}

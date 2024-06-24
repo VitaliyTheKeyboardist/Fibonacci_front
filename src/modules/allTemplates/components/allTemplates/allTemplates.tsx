@@ -16,7 +16,7 @@ const AllTemplates = () => {
       <div className={styles.title}>Шаблоны</div>
       <div className={styles.templatesBlock}>
         {templates.map((item) => (
-          <div className={styles.templateItemBlock}>
+          <div className={styles.templateItemBlock} key={item.id}>
             <div className={styles.templateCard}>
               <Template item={item} />
             </div>
