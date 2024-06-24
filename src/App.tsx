@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import AuthPage from "./pages/authPage/authPage"
-
-import "./App.scss"
 import CreatePage from "./pages/createPage/createPage"
 import HomePage from "./pages/homePage/homePage"
 import RegistPage from "./pages/registPage/registPage"
@@ -13,7 +11,9 @@ import SettingsPage from "./pages/settingsPage/settingsPage"
 import AllPresentationsPage from "./pages/allPresentationsPage/allPresentationsPage"
 import AllTemplatesPage from "./pages/allTemplatesPage/allTemplatesPage"
 import OnePresentationPage from "./pages/onePresentationPage/onePresentationPage"
-import BigSlide from "./modules/presentationNavBar/components/bigSlide/bigSlide"
+import PresentationBigSlide from "./modules/presentationBigSlide/presentationBigSlide"
+
+import "./App.scss"
 
 function App() {
   return (
@@ -31,9 +31,8 @@ function App() {
           <Route path="all-presentations" element={<AllPresentationsPage />} />
           <Route path="all-templates" element={<AllTemplatesPage />} />
         </Route>
-        {/* <Route path="/presentation" element={<OnePresentationPage />} /> */}
         <Route path="/presentation/:uuid" element={<OnePresentationPage />}>
-          <Route index path="slide/:index" element={<BigSlide />} />
+          <Route index path="slide/:index" element={<PresentationBigSlide />} />
         </Route>
       </Routes>
     </>

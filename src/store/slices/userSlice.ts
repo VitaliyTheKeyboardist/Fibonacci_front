@@ -25,6 +25,7 @@ export const getUser = () => async (dispatch: AppDispatch) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     dispatch(userFetchingError(error.message))
+    console.log(error)
   }
 }
 

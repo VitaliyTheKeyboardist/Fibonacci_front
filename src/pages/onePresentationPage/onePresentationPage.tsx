@@ -1,33 +1,26 @@
-import { Outlet, useParams } from "react-router-dom"
-import PresentationNavBar from "../../modules/presentationNavBar/presentationNavBar"
-
-import PresentationHeader from "../../modules/presentationHeader/presentationHeader"
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxToolkitHooks"
 import { useEffect } from "react"
+import { useParams } from "react-router-dom"
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxToolkitHooks"
 import { getPresentation } from "../../store/slices/presentationSlice"
 
-import styles from "./onePresentationPage.module.scss"
-
+import MinimaTemplate from "../../templates/minimaTemplate/minimaTemplate"
 
 const OnePresentationPage = () => {
   const params = useParams()
+  const uuid = params.uuid
   const { presentation } = useAppSelector((state) => state.presentation)
   const dispatch = useAppDispatch()
+
   useEffect(() => {
-    if (!presentation.uuid && params.uuid) {
-      dispatch(getPresentation(params.uuid))
+    if (!presentation.uuid && uuid) {
+      dispatch(getPresentation(uuid))
     }
-  }, [presentation])
-  console.log(presentation)
-  return (
-    <>
-      <PresentationHeader presentation={presentation} />
-      <main className={styles.pageWrap}>
-        <PresentationNavBar presentation={presentation} />
-        <Outlet />
-      </main>
-    </>
-  )
+  }, [presentation, dispatch, uuid])
+  
+  switch (presentation.template) {
+    case "1":
+      return <MinimaTemplate presentation={presentation} />
+  }
 }
 
 export default OnePresentationPage

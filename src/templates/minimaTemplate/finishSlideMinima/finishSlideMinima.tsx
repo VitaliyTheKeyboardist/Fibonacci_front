@@ -1,11 +1,9 @@
 
-import styles from "./finishSlide.module.scss"
+import { IFinishSlide } from "../../../types/components/minimaTemplate"
+import styles from "./finishSlideMinima.module.scss"
 
-export interface IFinishSlide {
-  type: "presentationList" | "presentation" | "bigSlide"
-}
 
-const FinishSlide = ({ type }: IFinishSlide) => {
+const FinishSlideMinima = ({ type }: IFinishSlide) => {
   if (type === "presentation")
   return (
     <div className={styles.container}>
@@ -42,4 +40,4 @@ const FinishSlide = ({ type }: IFinishSlide) => {
     )
 }
 
-export default FinishSlide
+export default FinishSlideMinima

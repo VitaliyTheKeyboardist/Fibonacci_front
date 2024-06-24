@@ -1,4 +1,4 @@
-export interface ITemplateNumbers {
+export interface IMinimaTemplateNumbers {
     1: string
     2: string
     3: string
@@ -29,7 +29,7 @@ export interface ITemplateNumbers {
 }
 
 
-export const templateNumbers: ITemplateNumbers = {
+export const minimaTemplateNumbers: IMinimaTemplateNumbers = {
     1: "ONE",
     2: "TWO",
     3: "THREE",

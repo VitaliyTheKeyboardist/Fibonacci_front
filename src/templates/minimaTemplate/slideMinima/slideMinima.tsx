@@ -7,7 +7,7 @@ export interface IMinimalSlide {
   content: ISlide
 }
 
-const Slide = ({ type, numberSlide, content }: IMinimalSlide) => {
+const SlideMinima = ({ type, numberSlide, content }: IMinimalSlide) => {
   switch (numberSlide) {
     case "ONE":
       return (
@@ -102,4 +102,4 @@ const Slide = ({ type, numberSlide, content }: IMinimalSlide) => {
   }
 }
 
-export default Slide
+export default SlideMinima
