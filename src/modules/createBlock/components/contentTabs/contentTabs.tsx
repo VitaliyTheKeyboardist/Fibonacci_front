@@ -22,7 +22,7 @@ const ContentTabs = ({
   const handleClick = async () =>{
     try {
       const result = await presentationCreate(dispatch, value, template)
-      navigate(`/presentation/${result?.uuid}`)
+      navigate(`/presentation/${result?.uuid}/slide/0`)
     } catch (error) {
       console.log(error)
     }
