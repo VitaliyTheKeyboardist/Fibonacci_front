@@ -17,7 +17,11 @@ const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div className={styles[`slideWrap${numberSlide}__text`]}>
+            <div className={
+                content.text.length < 850
+                  ? styles[`slideWrap${numberSlide}__text`]
+                  : styles[`slideWrap${numberSlide}__smallText`]
+              }>
               {content.text}
             </div>
             <img className={styles.diamond} src={Diamond} alt="Ромбик" />
@@ -45,7 +49,11 @@ const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div className={styles[`slideWrap${numberSlide}__text`]}>
+            <div className={
+                content.text.length < 850
+                  ? styles[`slideWrap${numberSlide}__text`]
+                  : styles[`slideWrap${numberSlide}__smallText`]
+              }>
               {content.text}
             </div>
             {content.images.map((image) => {
@@ -72,7 +80,11 @@ const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div className={styles[`slideWrap${numberSlide}__text`]}>
+            <div className={
+                content.text.length < 850
+                  ? styles[`slideWrap${numberSlide}__text`]
+                  : styles[`slideWrap${numberSlide}__smallText`]
+              }>
               {content.text}
             </div>
             {content.images.map((image) => {
@@ -101,7 +113,11 @@ const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div className={styles[`slideWrap${numberSlide}__text`]}>
+            <div className={
+                content.text.length < 850
+                  ? styles[`slideWrap${numberSlide}__text`]
+                  : styles[`slideWrap${numberSlide}__smallText`]
+              }>
               {content.text}
             </div>
             {content.images.map((image) => {
@@ -130,7 +146,11 @@ const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div className={styles[`slideWrap${numberSlide}__text`]}>
+            <div className={
+                content.text.length < 850
+                  ? styles[`slideWrap${numberSlide}__text`]
+                  : styles[`slideWrap${numberSlide}__smallText`]
+              }>
               {content.text}
             </div>
             {content.images.map((image, index) => {

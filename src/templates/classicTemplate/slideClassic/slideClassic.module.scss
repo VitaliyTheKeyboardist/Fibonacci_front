@@ -20,6 +20,21 @@
   & .slideWrap__text {
     font-size: 1vw;
   }
+  & .slideWrapONE__smallText {
+    font-size: 0.9vw;
+  }
+  & .slideWrapTWO__smallText {
+    font-size: 0.9vw;
+  }
+  & .slideWrapTHREE__smallText {
+    font-size: 0.9vw;
+  }
+  & .slideWrapFOUR__smallText {
+    font-size: 0.9vw;
+  }
+  & .slideWrapFIVE__smallText {
+    font-size: 0.9vw;
+  }
 }
 
 .slideWrap {
@@ -69,6 +84,11 @@
 .slideWrapONE__text {
   composes: slideWrap__text;
 }
+.slideWrapONE__smallText {
+  composes: slideWrap__text;
+  top: 25%;
+  font-size: 0.1vw;
+}
 
 .slideWrapONE__imageContainer {
   composes: slideWrap__imageContainer;
@@ -109,6 +129,11 @@
   height: 37.5%;
 }
 
+.slideWrapTWO__smallText {
+  composes: slideWrapTWO__text;
+  font-size: 0.1vw;
+}
+
 .slideWrapTWO__imageContainer {
   composes: slideWrap__imageContainer;
   top: 32.6%;
@@ -133,6 +158,11 @@
 .slideWrapTHREE__text {
   composes: slideWrap__text;
   left: 48%;
+}
+
+.slideWrapTHREE__smallText {
+  composes: slideWrapTHREE__text;
+  font-size: 0.1vw;
 }
 
 .slideWrapTHREE__imageContainer {
@@ -165,6 +195,11 @@
   height: 37.5%;
 }
 
+.slideWrapFOUR__smallText {
+  composes: slideWrapFOUR__text;
+  font-size: 0.1vw;
+}
+
 .slideWrapFOUR__imageContainer {
   composes: slideWrap__imageContainer;
   top: 32.6%;
@@ -193,6 +228,11 @@
   left: 8%;
   width: 82%;
   height: 37.5%;
+}
+
+.slideWrapFIVE__smallText {
+  composes: slideWrapFIVE__text;
+  font-size: 0.1vw;
 }
 
 .slideWrapFIVE__imageContainer_0 {
