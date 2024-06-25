@@ -32,22 +32,24 @@ const CreateBlock = () => {
       </div>
       {toggleState === 2 && (
         <ContentTabs
-          type="themeInput"
+          className="themeInput"
           value={theme}
           count={count}
           onChange={handleChange}
           maxCount={30}
           placeholder="Вставьте тему сюда"
+          type="topic"
         />
       )}
       {toggleState === 1 && (
         <ContentTabs
-          type="textInput"
+          className="textInput"
           value={theme}
           count={count}
           onChange={handleChange}
           maxCount={3800}
           placeholder="Вставьте текст сюда"
+          type="text"
         />
       )}
     </div>

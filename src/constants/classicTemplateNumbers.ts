@@ -1,0 +1,59 @@
+export interface IClassicTemplateNumbers {
+    1: string
+    2: string
+    3: string
+    4: string
+    5: string
+    6: string
+    7: string
+    8: string
+    9: string
+    10: string
+    11: string
+    12: string
+    13: string
+    14: string
+    15: string
+    16: string
+    17: string
+    18: string
+    19: string
+    20: string
+    21: string
+    22: string
+    23: string
+    24: string
+    25: string
+    26: string
+    27: string
+}
+
+export const classicTemplateNumbers: IClassicTemplateNumbers = {
+    1: "ONE",
+    2: "TWO",
+    3: "THREE",
+    4: "FOUR",
+    5: "FIVE",
+    6: "ONE",
+    7: "TWO",
+    8: "THREE",
+    9: "FOUR",
+    10: "FIVE",
+    11: "ONE",
+    12: "TWO",
+    13: "THREE",
+    14: "FOUR",
+    15: "FIVE",
+    16: "ONE",
+    17: "TWO",
+    18: "THREE",
+    19: "FOUR",
+    20: "FIVE",
+    21: "ONE",
+    22: "TWO",
+    23: "THREE",
+    24: "FOUR",
+    25: "FIVE",
+    26: "ONE",
+    27: "TWO",
+}

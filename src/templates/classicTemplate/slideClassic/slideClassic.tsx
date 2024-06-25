@@ -1,5 +1,6 @@
 import { ISlide } from "../../../types/components/presentation"
-import styles from "./slideMinima.module.scss"
+import Diamond from "../../../assets/templates/classicTemplate/diamond.svg"
+import styles from "./slideClassic.module.scss"
 
 export interface IMinimalSlide {
   type: "navList" | "container" | "bigSlide"
@@ -7,7 +8,7 @@ export interface IMinimalSlide {
   content: ISlide
 }
 
-const SlideMinima = ({ type, numberSlide, content }: IMinimalSlide) => {
+const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
   switch (numberSlide) {
     case "ONE":
       return (
@@ -16,17 +17,65 @@ const SlideMinima = ({ type, numberSlide, content }: IMinimalSlide) => {
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div
-              className={
-                content.text.length < 850
-                  ? styles[`slideWrap${numberSlide}__text`]
-                  : styles[`slideWrap${numberSlide}__smallText`]
-              }
-            >
+            <div className={styles[`slideWrap${numberSlide}__text`]}>
               {content.text}
             </div>
-            {content.images.map((image, index) => {
-              if (index < 1)
+            <img className={styles.diamond} src={Diamond} alt="Ромбик" />
+            {content.images.map((image) => {
+              return (
+                <div
+                  key={image.api_url}
+                  className={styles[`slideWrap${numberSlide}__imageContainer`]}
+                >
+                  <img
+                    src={image.api_url}
+                    className={styles.image}
+                    alt={image.description}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )
+    case "TWO":
+      return (
+        <div className={styles[type]}>
+          <div className={styles[`slideWrap${numberSlide}`]}>
+            <div className={styles[`slideWrap${numberSlide}__title`]}>
+              {content.title}
+            </div>
+            <div className={styles[`slideWrap${numberSlide}__text`]}>
+              {content.text}
+            </div>
+            {content.images.map((image) => {
+              return (
+                <div
+                  key={image.api_url}
+                  className={styles[`slideWrap${numberSlide}__imageContainer`]}
+                >
+                  <img
+                    src={image.api_url}
+                    className={styles.image}
+                    alt={image.description}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )
+    case "THREE":
+      return (
+        <div className={styles[type]}>
+          <div className={styles[`slideWrap${numberSlide}`]}>
+            <div className={styles[`slideWrap${numberSlide}__title`]}>
+              {content.title}
+            </div>
+            <div className={styles[`slideWrap${numberSlide}__text`]}>
+              {content.text}
+            </div>
+            {content.images.map((image) => {
                 return (
                   <div
                     key={image.api_url}
@@ -45,22 +94,46 @@ const SlideMinima = ({ type, numberSlide, content }: IMinimalSlide) => {
           </div>
         </div>
       )
-    case "TWO":
+      case "FOUR":
       return (
         <div className={styles[type]}>
           <div className={styles[`slideWrap${numberSlide}`]}>
             <div className={styles[`slideWrap${numberSlide}__title`]}>
               {content.title}
             </div>
-            <div className={
-                content.text.length < 850
-                  ? styles[`slideWrap${numberSlide}__text`]
-                  : styles[`slideWrap${numberSlide}__smallText`]
-              }>
+            <div className={styles[`slideWrap${numberSlide}__text`]}>
+              {content.text}
+            </div>
+            {content.images.map((image) => {
+                return (
+                  <div
+                    key={image.api_url}
+                    className={
+                      styles[`slideWrap${numberSlide}__imageContainer`]
+                    }
+                  >
+                    <img
+                      src={image.api_url}
+                      className={styles.image}
+                      alt={image.description}
+                    />
+                  </div>
+                )
+            })}
+          </div>
+        </div>
+      )
+      case "FIVE":
+      return (
+        <div className={styles[type]}>
+          <div className={styles[`slideWrap${numberSlide}`]}>
+            <div className={styles[`slideWrap${numberSlide}__title`]}>
+              {content.title}
+            </div>
+            <div className={styles[`slideWrap${numberSlide}__text`]}>
               {content.text}
             </div>
             {content.images.map((image, index) => {
-              if (index < 2)
                 return (
                   <div
                     key={image.api_url}
@@ -79,41 +152,7 @@ const SlideMinima = ({ type, numberSlide, content }: IMinimalSlide) => {
           </div>
         </div>
       )
-    case "THREE":
-      return (
-        <div className={styles[type]}>
-          <div className={styles[`slideWrap${numberSlide}`]}>
-            <div className={styles[`slideWrap${numberSlide}__title`]}>
-              {content.title}
-            </div>
-            <div className={
-                content.text.length < 850
-                  ? styles[`slideWrap${numberSlide}__text`]
-                  : styles[`slideWrap${numberSlide}__smallText`]
-              }>
-              {content.text}
-            </div>
-            {content.images.map((image, index) => {
-              if (index < 1)
-                return (
-                  <div
-                    key={image.api_url}
-                    className={
-                      styles[`slideWrap${numberSlide}__imageContainer`]
-                    }
-                  >
-                    <img
-                      src={image.api_url}
-                      className={styles.image}
-                      alt={image.description}
-                    />
-                  </div>
-                )
-            })}
-          </div>
-        </div>
-      )
   }
 }
 
-export default SlideMinima
+export default SlideClassic
