@@ -150,14 +150,17 @@
 
 .slideWrapTHREE__title {
   composes: slideWrap__title;
-  left: 48%;
-  width: 45%;
-  height: 20%;
+  top: 3%;
+  left: 8%;
+  width: 90%;
+  height: 14%;
 }
 
 .slideWrapTHREE__text {
   composes: slideWrap__text;
   left: 48%;
+  top: 20%;
+  width: 50%;
 }
 
 .slideWrapTHREE__smallText {
