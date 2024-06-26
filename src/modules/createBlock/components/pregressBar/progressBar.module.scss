@@ -1,0 +1,126 @@
+// .ready {
+//   max-width: 100vw;
+//   max-height: 100vh;
+//   opacity: 1;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 11;
+//   transition: all ease 0.2s;
+// }
+//
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f1014;
+  opacity: 0.9;
+}
+
+.root {
+  padding: 30px 30px 58px 30px;
+  gap: 22px;
+  width: 57vw;
+  border-radius: 12px;
+  background: linear-gradient(114deg, #1d1e26 10.59%, #13141a 88.04%);
+  opacity: 1;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.wait {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.process {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 58px;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.step {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.progressBarOut {
+  width: 38vw;
+  height: 0.8vw;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #c8cad7;
+  box-shadow: 0px 3px 4px 0px rgba(200, 202, 215, 0.05);
+}
+
+.lightBlock {
+  display: flex;
+  align-items: center;
+}
+
+.adviceBlock {
+  display: flex;
+  width: 53vw;
+  padding: 22px 22px 30px 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 10px;
+  background: #494952;
+  margin-top: 58px;
+}
+
+.adviceTitle {
+  color: #73e39c;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.advice {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 430px) {
+  .root {
+    width: 80vw;
+  }
+  .step {
+    text-align: center;
+  }
+  .progressBarOut {
+    width: 65vw;
+    height: 1.5vw;
+  }
+  .adviceBlock {
+    align-items: center;
+    margin: 58px auto 0;
+  }
+  .advice {
+    text-align: center;
+  }
+}

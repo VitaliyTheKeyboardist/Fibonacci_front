@@ -1,11 +1,13 @@
 import { IPresentationCard } from "../../../../types/components/presentationCard"
-import styles from "./presentationCard.module.scss"
 import { useAppDispatch } from "../../../../hooks/reduxToolkitHooks"
 import { getPresentation } from "../../../../store/slices/presentationSlice"
-import TitleSlide from "../../../../templates/minimaTemplate/titleSlideMinima/titleSlideMinima"
 import { useNavigate } from "react-router-dom"
+import TitleSlideMinima from "../../../../templates/minimaTemplate/titleSlideMinima/titleSlideMinima"
+import TitleSlideClassic from "../../../../templates/classicTemplate/titleSlideClassic/titleSlideClassic"
 
-const PresentationCard = ({ title, uuid }: IPresentationCard) => {
+import styles from "./presentationCard.module.scss"
+
+const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
@@ -17,7 +19,12 @@ const PresentationCard = ({ title, uuid }: IPresentationCard) => {
   return (
     <div className={styles.presentationItem}>
       <div className={styles.img}>
-        <TitleSlide type="presentationCard" title={title} />
+        {template === "1" && (
+          <TitleSlideMinima type="presentationCard" title={title} />
+        )}
+        {template === "classic" && (
+          <TitleSlideClassic type="presentationCard" title={title} />
+        )}
       </div>
       <span className={styles.name}>{title}</span>
       <button className={styles.updated} onClick={handleClick}>

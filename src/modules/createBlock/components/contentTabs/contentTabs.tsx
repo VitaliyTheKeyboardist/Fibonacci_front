@@ -9,6 +9,7 @@ import {
 
 import styles from "./contentTabs.module.scss"
 import { useState } from "react"
+import TemplatesModal from "../templatesModal/templatesModal"
 
 const ContentTabs = ({
   className,
@@ -20,28 +21,32 @@ const ContentTabs = ({
   type,
 }: IContentTabs) => {
   const [disabled, setDisabled] = useState<boolean>(false)
+  const [templatesIsOpen, setTemplatesIsOpen] = useState<boolean>(false)
 
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const template = "classic"
 
-  const handleClick = async () => {
-    try {
-      setDisabled(true)
-      if (type === "topic") {
-        const result = await presentationCreate(dispatch, value, template, type)
-        navigate(`/presentation/${result?.uuid}/slide/0`)
-        setDisabled(false)
-      }
-      if (type === "text") {
-        const result = await presentationCreateText(dispatch, value, template, type)
-        navigate(`/presentation/${result?.uuid}/slide/0`)
-        setDisabled(false)
-      }
-    } catch (error) {
-      console.log(error)
-    }
+  const handleClick = () => {
+    setTemplatesIsOpen(true)
   }
+  // const handleClick = async () => {
+  //   try {
+  //     setDisabled(true)
+  //     if (type === "topic") {
+  //       const result = await presentationCreate(dispatch, value, template, type)
+  //       navigate(`/presentation/${result?.uuid}/slide/0`)
+  //       setDisabled(false)
+  //     }
+  //     if (type === "text") {
+  //       const result = await presentationCreateText(dispatch, value, template, type)
+  //       navigate(`/presentation/${result?.uuid}/slide/0`)
+  //       setDisabled(false)
+  //     }
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
   return (
     <div className={styles.contentTabs}>
@@ -80,6 +85,14 @@ const ContentTabs = ({
           </button>
         </div>
       </div>
+      {templatesIsOpen && (
+        <TemplatesModal
+          setTemplatesIsOpen={setTemplatesIsOpen}
+          setDisabled={setDisabled}
+          type={type}
+          value={value}
+        />
+      )}
     </div>
   )
 }

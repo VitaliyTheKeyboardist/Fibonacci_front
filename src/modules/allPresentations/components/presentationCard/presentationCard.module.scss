@@ -1,4 +1,5 @@
 .presentationItem {
+  width: 323px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -21,6 +22,10 @@
   font-weight: 500;
   line-height: normal;
   margin-bottom: 8px;
+  width: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .updated {
   color: #a6a7b1;

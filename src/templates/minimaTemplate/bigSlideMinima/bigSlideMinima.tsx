@@ -12,7 +12,7 @@ const BigSlideMinima = ({ index, item, finishSlide }: IBigSlideMinima) => {
     return (
       <>
         {index === 0 && <TitleSlideMinima type="bigSlide" title={item.title} />}
-        {index > 0 && index < 11 && (
+        {index > 0 && index < finishSlide && (
           <SlideMinima
             type="bigSlide"
             numberSlide={

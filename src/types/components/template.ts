@@ -1,7 +1,7 @@
 import { MouseEvent } from "react"
 
 export interface ITemplateItem {
-    id: string, 
+    template: string, 
     img: string, 
     title: string
 }

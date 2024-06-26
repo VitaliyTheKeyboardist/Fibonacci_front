@@ -41,6 +41,7 @@ const AllPresentations = () => {
               key={item.uuid}
               title={item.title}
               uuid={item.uuid}
+              template={item.template}
             />
           )
         })}

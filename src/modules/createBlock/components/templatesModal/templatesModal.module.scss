@@ -1,0 +1,139 @@
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f1014;
+  opacity: 0.9;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.root {
+  padding: 30px 30px 50px 30px;
+  gap: 22px;
+  width: 781px;
+  border-radius: 12px;
+  background: #373840;
+  opacity: 1;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.title {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+
+.templates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 45px;
+}
+
+.img {
+  width: 227px;
+  height: 122px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.selected {
+  width: 227px;
+  height: 122px;
+  border: 2px solid #3a48e1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.text {
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 22px 0;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  height: 40px;
+  padding: 16px 22px;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #3a48e1;
+  cursor: pointer;
+
+  color: #f5f5fa;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (max-width: 430px) {
+  .root {
+    width: 78vw;
+    margin-top: 40px;
+    background: linear-gradient(114deg, #1d1e26 10.59%, #13141a 88.04%);
+  }
+  .templates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+
+  .img {
+    cursor: pointer;
+  }
+
+  .btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    height: 40px;
+    padding: 16px 22px;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #3a48e1;
+    cursor: pointer;
+
+    color: #f5f5fa;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
