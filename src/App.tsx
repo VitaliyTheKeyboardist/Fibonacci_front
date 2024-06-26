@@ -35,7 +35,7 @@ function App() {
         <Route path="/presentation/:uuid" element={<OnePresentationPage />}>
           <Route index path="slide/:index" element={<PresentationBigSlide />} />
         </Route>
-        <Route path="/classicTemplate" element={<ClassicTemplate />} />
+        {/* <Route path="/classicTemplate" element={<ClassicTemplate />} /> */}
       </Routes>
     </>
   )

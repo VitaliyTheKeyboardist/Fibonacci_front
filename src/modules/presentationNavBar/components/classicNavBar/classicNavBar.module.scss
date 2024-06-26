@@ -1,0 +1,28 @@
+.navigationContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 30px 22px;
+    height: calc(100vh - 42px);
+    overflow: scroll;
+    border-right: 2px solid var(--bc-dop);
+    gap: 20px;
+}
+
+.slideWrap {
+    display: flex;
+    gap: 20px;
+}
+
+.slideContainer {
+    position: relative;
+    width: 7vw;
+    min-height: 4vw;
+}
+
+.numberSlide {
+    align-self: center;
+    color: var(--text-dop);
+    width: 10px;
+    font-size: 12px;
+}

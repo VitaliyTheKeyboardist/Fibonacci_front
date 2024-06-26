@@ -23,7 +23,7 @@ const ContentTabs = ({
 
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
-  const template = "1"
+  const template = "classic"
 
   const handleClick = async () => {
     try {

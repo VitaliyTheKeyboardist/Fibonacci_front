@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/reduxToolkitHooks"
 import { getPresentation } from "../../store/slices/presentationSlice"
 
 import MinimaTemplate from "../../templates/minimaTemplate/minimaTemplate"
+import ClassicTemplate from "../../templates/classicTemplate/classicTemplate"
 
 const OnePresentationPage = () => {
   const params = useParams()
@@ -20,6 +21,10 @@ const OnePresentationPage = () => {
   switch (presentation.template) {
     case "1":
       return <MinimaTemplate presentation={presentation} />
+  }
+  switch (presentation.template) {
+    case "classic":
+      return <ClassicTemplate presentation={presentation} />
   }
 }
 
