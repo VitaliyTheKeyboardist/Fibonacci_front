@@ -1,10 +1,13 @@
-import { IkfuTemplateNumbers, kfuTemplateNumbers } from "../../../constants/kfuTemplateNumbers"
-import { IBigSlideMinima } from "../../../types/components/minimaTemplate"
+import {
+  IkfuTemplateNumbers,
+  kfuTemplateNumbers,
+} from "../../../constants/kfuTemplateNumbers"
+import { IPresentationBigSlide } from "../../../types/components/presentationTemplate"
 import FinishSlideKFU from "../finishSlideKFU/finishSlideKFU"
 import SlideKFU from "../slideKFU/slideKFU"
 import TitleSlideKFU from "../titleSlideKFU/titleSlideKFU"
 
-const BigSlideKFU = ({ index, item, finishSlide }: IBigSlideMinima) => {
+const BigSlideKFU = ({ index, item, finishSlide }: IPresentationBigSlide) => {
   if (item)
     return (
       <>
@@ -12,9 +15,7 @@ const BigSlideKFU = ({ index, item, finishSlide }: IBigSlideMinima) => {
         {index > 0 && index < finishSlide && (
           <SlideKFU
             type="bigSlide"
-            numberSlide={
-              kfuTemplateNumbers[index as keyof IkfuTemplateNumbers]
-            }
+            numberSlide={kfuTemplateNumbers[index as keyof IkfuTemplateNumbers]}
             content={item}
           />
         )}

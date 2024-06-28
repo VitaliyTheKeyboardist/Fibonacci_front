@@ -1,10 +1,10 @@
 import { IPresentation, ISlide } from "./presentation"
 
-export interface IMinimaTemplate {
+export interface IPresentationTemplate {
   presentation: IPresentation
 }
 
-export interface IBigSlideMinima {
+export interface IPresentationBigSlide {
   index: number
   item: ISlide
   finishSlide: number

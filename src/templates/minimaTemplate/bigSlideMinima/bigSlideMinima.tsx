@@ -4,10 +4,10 @@ import {
   minimaTemplateNumbers,
 } from "../../../constants/minimaTemplateNumbers"
 import FinishSlideMinima from "../finishSlideMinima/finishSlideMinima"
-import { IBigSlideMinima } from "../../../types/components/minimaTemplate"
+import { IPresentationBigSlide } from "../../../types/components/presentationTemplate"
 import TitleSlideMinima from "../titleSlideMinima/titleSlideMinima"
 
-const BigSlideMinima = ({ index, item, finishSlide }: IBigSlideMinima) => {
+const BigSlideMinima = ({ index, item, finishSlide }: IPresentationBigSlide) => {
   if (item)
     return (
       <>

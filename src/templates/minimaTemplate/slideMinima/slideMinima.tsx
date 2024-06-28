@@ -1,13 +1,9 @@
-import { ISlide } from "../../../types/components/presentation"
+import { ISlideComponent } from "../../../types/components/slideComponent"
 import styles from "./slideMinima.module.scss"
 
-export interface IMinimalSlide {
-  type: "navList" | "container" | "bigSlide"
-  numberSlide: string
-  content: ISlide
-}
 
-const SlideMinima = ({ type, numberSlide, content }: IMinimalSlide) => {
+
+const SlideMinima = ({ type, numberSlide, content }: ISlideComponent) => {
   switch (numberSlide) {
     case "ONE":
       return (

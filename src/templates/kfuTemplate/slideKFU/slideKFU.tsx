@@ -1,13 +1,9 @@
-import { ISlide } from "../../../types/components/presentation"
+import { ISlideComponent } from "../../../types/components/slideComponent"
 import styles from "./slideKFU.module.scss"
 
-export interface IMinimalSlide {
-  type: "navList" | "container" | "bigSlide"
-  numberSlide: string
-  content: ISlide
-}
 
-const SlideKFU = ({ type, numberSlide, content }: IMinimalSlide) => {
+
+const SlideKFU = ({ type, numberSlide, content }: ISlideComponent) => {
   switch (numberSlide) {
     case "ONE":
     case "THREE":

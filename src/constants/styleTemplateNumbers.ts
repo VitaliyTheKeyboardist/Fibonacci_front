@@ -1,0 +1,59 @@
+export interface IStyleTemplateNumbers {
+    1: string
+    2: string
+    3: string
+    4: string
+    5: string
+    6: string
+    7: string
+    8: string
+    9: string
+    10: string
+    11: string
+    12: string
+    13: string
+    14: string
+    15: string
+    16: string
+    17: string
+    18: string
+    19: string
+    20: string
+    21: string
+    22: string
+    23: string
+    24: string
+    25: string
+    26: string
+    27: string
+}
+
+export const styleTemplateNumbers: IStyleTemplateNumbers = {
+    1: "ONE",
+    2: "TWO",
+    3: "THREE",
+    4: "FOUR",
+    5: "ONE",
+    6: "TWO",
+    7: "THREE",
+    8: "FOUR",
+    9: "ONE",
+    10: "TWO",
+    11: "THREE",
+    12: "FOUR",
+    13: "ONE",
+    14: "TWO",
+    15: "THREE",
+    16: "FOUR",
+    17: "ONE",
+    18: "TWO",
+    19: "THREE",
+    20: "FOUR",
+    21: "ONE",
+    22: "TWO",
+    23: "THREE",
+    24: "FOUR",
+    25: "ONE",
+    26: "TWO",
+    27: "THREE",
+}

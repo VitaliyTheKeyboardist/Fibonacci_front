@@ -5,9 +5,9 @@ import PresentationNavBar from "../../modules/presentationNavBar/presentationNav
 
 import { IPresentationTemplate } from "../../types/components/presentationTemplate"
 
-import styles from "./minimaTemplate.module.scss"
+import styles from "./styleTemplate.module.scss"
 
-const MinimaTemplate = ({ presentation }: IPresentationTemplate) => {
+const StyleTemplate = ({ presentation }: IPresentationTemplate) => {
   if (!presentation.title)
     return (
       <>
@@ -37,4 +37,4 @@ const MinimaTemplate = ({ presentation }: IPresentationTemplate) => {
     )
 }
 
-export default MinimaTemplate
+export default StyleTemplate

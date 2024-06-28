@@ -7,6 +7,7 @@ import TitleSlideClassic from "../../../../templates/classicTemplate/titleSlideC
 
 import styles from "./presentationCard.module.scss"
 import TitleSlideKFU from "../../../../templates/kfuTemplate/titleSlideKFU/titleSlideKFU"
+import TitleSlideStyle from "../../../../templates/styleTemplate/titleSlideStyle/titleSlideStyle"
 
 const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
   const dispatch = useAppDispatch()
@@ -28,6 +29,9 @@ const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
         )}
         {template === "kfu" && (
           <TitleSlideKFU type="presentationCard" title={title} />
+        )}
+        {template === "techno" && (
+          <TitleSlideStyle type="presentationCard" title={title} />
         )}
       </div>
       <span className={styles.name}>{title}</span>

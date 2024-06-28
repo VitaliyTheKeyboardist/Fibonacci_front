@@ -1,7 +1,7 @@
 import { IFinishSlide } from "../../../types/components/presentationTemplate"
-import styles from "./finishSlideKFU.module.scss"
+import styles from "./finishSlideStyle.module.scss"
 
-const FinishSlideKFU = ({ type }: IFinishSlide) => {
+const FinishSlideStyle = ({ type }: IFinishSlide) => {
   if (type === "presentation")
     return (
       <div className={styles.container}>
@@ -32,4 +32,4 @@ const FinishSlideKFU = ({ type }: IFinishSlide) => {
     )
 }
 
-export default FinishSlideKFU
+export default FinishSlideStyle

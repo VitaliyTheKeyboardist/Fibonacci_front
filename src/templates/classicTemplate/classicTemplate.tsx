@@ -4,15 +4,14 @@
 //   IClassicTemplateNumbers,
 //   classicTemplateNumbers,
 // } from "../../constants/classicTemplateNumbers"
-import { IMinimaTemplate } from "../../types/components/minimaTemplate"
+import { IPresentationTemplate } from "../../types/components/presentationTemplate"
 import { Link, Outlet } from "react-router-dom"
 
 import styles from "./classicTemplate.module.scss"
 import PresentationHeader from "../../modules/presentationHeader/presentationHeader"
 import PresentationNavBar from "../../modules/presentationNavBar/presentationNavBar"
 
-const ClassicTemplate = ({ presentation }: IMinimaTemplate) => {
-
+const ClassicTemplate = ({ presentation }: IPresentationTemplate) => {
   if (!presentation.title)
     return (
       <>

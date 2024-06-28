@@ -1,0 +1,52 @@
+.container {
+  width: 100vw;
+  height: 56.25vw;
+  margin-bottom: 10px;
+}
+
+.titleWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/templates/styleTemplate/styleTitle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  height: 20%;
+  width: 70%;
+  font-size: 3vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.listContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.listTitleWrap {
+  composes: titleWrap;
+  border-radius: 8px;
+}
+
+.listTitle {
+  composes: title;
+  font-size: 0.3vw;
+}
+
+.cardTitle {
+  composes: title;
+  font-size: 1vw;
+}
+
+.bigSlide {
+  margin: auto;
+  width: 60vw;
+  height: 33.75vw;
+}

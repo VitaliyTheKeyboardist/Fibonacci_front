@@ -1,7 +1,7 @@
 import { ITitleSlide } from "../../../types/components/titleSlide"
-import styles from "./titleSlideKFU.module.scss"
+import styles from "./titleSlideStyle.module.scss"
 
-const TitleSlideKFU = ({ type, title }: ITitleSlide) => {
+const TitleSlideStyle = ({ type, title }: ITitleSlide) => {
   switch (type) {
     case "presentation":
       return <div className={styles.container}></div>
@@ -32,4 +32,4 @@ const TitleSlideKFU = ({ type, title }: ITitleSlide) => {
   }
 }
 
-export default TitleSlideKFU
+export default TitleSlideStyle

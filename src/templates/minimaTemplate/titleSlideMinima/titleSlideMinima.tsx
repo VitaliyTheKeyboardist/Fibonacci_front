@@ -1,7 +1,7 @@
-import { ITitlSlide } from "../../../types/components/minimaTitle"
+import { ITitleSlide } from "../../../types/components/titleSlide"
 import styles from "./titleSlideMinima.module.scss"
 
-const TitleSlideMinima = ({ type, title }: ITitlSlide) => {
+const TitleSlideMinima = ({ type, title }: ITitleSlide) => {
   switch (type) {
     case "presentation":
       return <div className={styles.container}></div>

@@ -1,12 +1,11 @@
-import { IMinimaTemplate } from "../../types/components/minimaTemplate"
+import { IPresentationTemplate } from "../../types/components/presentationTemplate"
 import { Link, Outlet } from "react-router-dom"
 
 import styles from "./kfuTemplate.module.scss"
 import PresentationHeader from "../../modules/presentationHeader/presentationHeader"
 import PresentationNavBar from "../../modules/presentationNavBar/presentationNavBar"
 
-const KfuTemplate = ({ presentation }: IMinimaTemplate) => {
-
+const KfuTemplate = ({ presentation }: IPresentationTemplate) => {
   if (!presentation.title)
     return (
       <>
@@ -34,7 +33,6 @@ const KfuTemplate = ({ presentation }: IMinimaTemplate) => {
         </main>
       </>
     )
-  
 }
 
 export default KfuTemplate

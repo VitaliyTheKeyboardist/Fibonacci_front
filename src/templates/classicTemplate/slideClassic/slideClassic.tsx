@@ -1,14 +1,9 @@
-import { ISlide } from "../../../types/components/presentation"
 import Diamond from "../../../assets/templates/classicTemplate/diamond.svg"
 import styles from "./slideClassic.module.scss"
+import { ISlideComponent } from "../../../types/components/slideComponent"
 
-export interface IMinimalSlide {
-  type: "navList" | "container" | "bigSlide"
-  numberSlide: string
-  content: ISlide
-}
 
-const SlideClassic = ({ type, numberSlide, content }: IMinimalSlide) => {
+const SlideClassic = ({ type, numberSlide, content }: ISlideComponent) => {
   switch (numberSlide) {
     case "ONE":
       return (

@@ -6,6 +6,7 @@ import { getPresentation } from "../../store/slices/presentationSlice"
 import MinimaTemplate from "../../templates/minimaTemplate/minimaTemplate"
 import ClassicTemplate from "../../templates/classicTemplate/classicTemplate"
 import KfuTemplate from "../../templates/kfuTemplate/kfuTemplate"
+import StyleTemplate from "../../templates/styleTemplate/styleTemplate"
 
 const OnePresentationPage = () => {
   const params = useParams()
@@ -27,6 +28,8 @@ const OnePresentationPage = () => {
       return <ClassicTemplate presentation={presentation} />
     case "kfu":
       return <KfuTemplate presentation={presentation} />
+    case "techno":
+      return <StyleTemplate presentation={presentation} />
   }
 }
 
