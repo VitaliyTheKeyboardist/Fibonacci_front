@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
-import BigSlideMinima from "../../templates/minimaTemplate/bigSlideMinima/bigSlideMinima"
 import { useAppSelector } from "../../hooks/reduxToolkitHooks"
+import BigSlideMinima from "../../templates/minimaTemplate/bigSlideMinima/bigSlideMinima"
 import BigSlideClassic from "../../templates/classicTemplate/bigSlideClassic/bigSlideClassic"
+import BigSlideKFU from "../../templates/kfuTemplate/bigSlideKFU/bigSlideKFU"
 
 const PresentationBigSlide = () => {
   const { presentation } = useAppSelector((store) => store.presentation)
@@ -19,6 +20,10 @@ const PresentationBigSlide = () => {
       case "classic":
         return (
           <BigSlideClassic index={index} item={item} finishSlide={finishSlide} />
+        )
+      case "kfu":
+        return (
+          <BigSlideKFU index={index} item={item} finishSlide={finishSlide} />
         )
     }
 }

@@ -6,6 +6,7 @@ import TitleSlideMinima from "../../../../templates/minimaTemplate/titleSlideMin
 import TitleSlideClassic from "../../../../templates/classicTemplate/titleSlideClassic/titleSlideClassic"
 
 import styles from "./presentationCard.module.scss"
+import TitleSlideKFU from "../../../../templates/kfuTemplate/titleSlideKFU/titleSlideKFU"
 
 const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
   const dispatch = useAppDispatch()
@@ -24,6 +25,9 @@ const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
         )}
         {template === "classic" && (
           <TitleSlideClassic type="presentationCard" title={title} />
+        )}
+        {template === "kfu" && (
+          <TitleSlideKFU type="presentationCard" title={title} />
         )}
       </div>
       <span className={styles.name}>{title}</span>

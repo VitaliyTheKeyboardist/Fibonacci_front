@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom'
 import { IPresentationNavBar } from '../../../../types/components/presentationNavBar'
 import { ISlide } from '../../../../types/components/presentation'
-import TitleSlideClassic from '../../../../templates/classicTemplate/titleSlideClassic/titleSlideClassic'
-import SlideClassic from '../../../../templates/classicTemplate/slideClassic/slideClassic'
+import TitleSlideKFU from '../../../../templates/kfuTemplate/titleSlideKFU/titleSlideKFU'
+import SlideKFU from '../../../../templates/kfuTemplate/slideKFU/slideKFU'
+import FinishSlideKFU from '../../../../templates/kfuTemplate/finishSlideKFU/finishSlideKFU'
+import { IkfuTemplateNumbers, kfuTemplateNumbers } from '../../../../constants/kfuTemplateNumbers'
 
-import FinishSlideClassic from '../../../../templates/classicTemplate/finishSlideClassic/finishSlideClassic'
-import { IClassicTemplateNumbers, classicTemplateNumbers } from '../../../../constants/classicTemplateNumbers'
+import styles from './kfuNavBar.module.scss'
 
-import styles from './classicNavBar.module.scss'
-
-const ClassicNavBar = ({ presentation }: IPresentationNavBar) => {
+const KfuNavBar = ({ presentation }: IPresentationNavBar) => {
     const finishSlide = presentation.slides.length - 1
 
     return (
@@ -20,17 +19,17 @@ const ClassicNavBar = ({ presentation }: IPresentationNavBar) => {
                 <div className={styles.numberSlide}>{index + 1}</div>
                 <Link to={`slide/${index}`} className={styles.slideContainer}>
                   {index === 0 && (
-                    <TitleSlideClassic type="presentationList" title={item.title} />
+                    <TitleSlideKFU type="presentationList" title={item.title} />
                   )}
                   {index > 0 && index < finishSlide && (
-                    <SlideClassic
+                    <SlideKFU
                       type="navList"
-                      numberSlide={classicTemplateNumbers[index as keyof IClassicTemplateNumbers]}
+                      numberSlide={kfuTemplateNumbers[index as keyof IkfuTemplateNumbers]}
                       content={item}
                     />
                   )}
                   {index === finishSlide && (
-                    <FinishSlideClassic type="presentationList" key={item.title} />
+                    <FinishSlideKFU type="presentationList" key={item.title} />
                   )}
                 </Link>
               </div>
@@ -40,4 +39,4 @@ const ClassicNavBar = ({ presentation }: IPresentationNavBar) => {
       )
 }
 
-export default ClassicNavBar
+export default KfuNavBar

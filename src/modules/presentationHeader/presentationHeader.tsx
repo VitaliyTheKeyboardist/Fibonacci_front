@@ -1,4 +1,3 @@
-
 import BackArrow from "../../assets/icons/pages/presentation/backArrow.svg"
 import CloudIcon from "../../assets/icons/pages/presentation/CloudIcon.svg"
 import { useNavigate } from "react-router-dom"
