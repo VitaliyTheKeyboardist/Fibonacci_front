@@ -21,7 +21,7 @@ const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
   return (
     <div className={styles.presentationItem}>
       <div className={styles.img}>
-        {template === "1" && (
+        {template === "minima" && (
           <TitleSlideMinima type="presentationCard" title={title} />
         )}
         {template === "classic" && (
@@ -30,7 +30,7 @@ const PresentationCard = ({ title, uuid, template }: IPresentationCard) => {
         {template === "kfu" && (
           <TitleSlideKFU type="presentationCard" title={title} />
         )}
-        {template === "techno" && (
+        {template === "style" && (
           <TitleSlideStyle type="presentationCard" title={title} />
         )}
       </div>

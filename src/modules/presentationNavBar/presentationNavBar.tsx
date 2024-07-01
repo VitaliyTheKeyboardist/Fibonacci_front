@@ -6,13 +6,13 @@ import StyleNavBar from "./components/styleNavBar/styleNavBar"
 
 const PresentationNavBar = ({ presentation }: IPresentationNavBar) => {
   switch (presentation.template) {
-    case "1":
+    case "minima":
       return <MinimaNavBar presentation={presentation} />
     case "classic":
       return <ClassicNavBar presentation={presentation} />
     case "kfu":
       return <KfuNavBar presentation={presentation} />
-    case "techno":
+    case "style":
       return <StyleNavBar presentation={presentation} />
   }
 }

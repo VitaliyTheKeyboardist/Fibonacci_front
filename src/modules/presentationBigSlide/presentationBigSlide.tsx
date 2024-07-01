@@ -14,7 +14,7 @@ const PresentationBigSlide = () => {
 
   if (item)
     switch (presentation.template) {
-      case "1":
+      case "minima":
         return (
           <BigSlideMinima index={index} item={item} finishSlide={finishSlide} />
         )
@@ -26,7 +26,7 @@ const PresentationBigSlide = () => {
         return (
           <BigSlideKFU index={index} item={item} finishSlide={finishSlide} />
         )
-      case "techno":
+      case "style":
         return (
           <BigSlideStyle index={index} item={item} finishSlide={finishSlide} />
         )

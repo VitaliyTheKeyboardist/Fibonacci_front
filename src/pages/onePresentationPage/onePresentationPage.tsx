@@ -21,14 +21,14 @@ const OnePresentationPage = () => {
   }, [presentation, dispatch, uuid])
   
   switch (presentation.template) {
-    case "1":
+    case "minima":
       return <MinimaTemplate presentation={presentation} />
   
     case "classic":
       return <ClassicTemplate presentation={presentation} />
     case "kfu":
       return <KfuTemplate presentation={presentation} />
-    case "techno":
+    case "style":
       return <StyleTemplate presentation={presentation} />
   }
 }

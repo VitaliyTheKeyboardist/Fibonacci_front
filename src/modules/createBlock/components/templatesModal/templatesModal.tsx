@@ -23,7 +23,7 @@ const TemplatesModal = ({
   setTemplatesIsOpen,
   setDisabled,
 }: ITemplatesModal) => {
-  const [template, setTemplate] = useState("1")
+  const [template, setTemplate] = useState("minima")
   const [progress, setProgress] = useState(false)
   const [isRunning, setIsRunning] = useState(false)
   const [error, setError] = useState(false)

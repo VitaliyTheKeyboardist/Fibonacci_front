@@ -1,5 +1,6 @@
 export const URLS = {
-    API_URL: "http://127.0.0.1:8000/api/",
+    // API_URL: "http://127.0.0.1:8000/api/",
+    API_URL: "http://fibonaccico.ru:8000/api/",
     REGIST: "users/",
     GET_USER: "users/",
     CHANGE_USER: "users/",

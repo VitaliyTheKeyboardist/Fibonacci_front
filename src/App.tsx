@@ -14,7 +14,6 @@ import OnePresentationPage from "./pages/onePresentationPage/onePresentationPage
 import PresentationBigSlide from "./modules/presentationBigSlide/presentationBigSlide"
 
 import "./App.scss"
-import StyletemplateTEMP from "./pages/styletemplateTEMP/styletemplateTEMP"
 
 function App() {
   return (
@@ -35,7 +34,6 @@ function App() {
         <Route path="/presentation/:uuid" element={<OnePresentationPage />}>
           <Route index path="slide/:index" element={<PresentationBigSlide />} />
         </Route>
-        <Route path="/style-template" element={<StyletemplateTEMP />} />
       </Routes>
     </>
   )
